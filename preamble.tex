@@ -1,0 +1,101 @@
+\usepackage{amsmath,amsfonts,amsthm,amssymb,varioref,times, commath}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks=true,
+ linkcolor=blue,
+ filecolor=magenta, 
+urlcolor=cyan,
+}
+\usepackage{lipsum}
+%to resume numbering in a list
+\usepackage{enumitem}
+%%%%%%pour ecrire en français avec les accents
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % load a font with all the characters
+\usepackage{units}
+%%%%%%%Image-related packages
+\usepackage{wrapfig}
+\usepackage{float, graphicx}
+\graphicspath{ {./img/} }
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+
+%%%%%%%pour faire des cadres
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+%%%%%%%chemistry frmulae
+\usepackage{chemfig}
+\usepackage{chemformula}
+\usepackage[version=4]{mhchem}
+
+% Title & headers
+\usepackage[explicit]{titlesec}
+% Raised Rule Command:
+% Arg 1 (Optional) - How high to raise the rule
+% Arg 2 - Thickness of the rule
+\newcommand{\raisedrulefill}[2][0ex]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
+\titleformat{\section}{\Large\bfseries}{\thesection. }{0em}{#1\,\raisedrulefill[0.4ex]{1pt}}
+% pour ecrire sur +sieurs colonnes
+\usepackage{multicol}
+\setlength{\columnseprule}{0.25pt}
+\setlength{\columnsep}{60pt}
+% Fusion de lignes de tableaux.
+\usepackage{multirow}
+% Position verticale des lettres dans la ligne de tableau.
+\usepackage{array}
+
+% MATH -----------------------------------------------------------
+\newcommand{\To}{\longrightarrow}
+\newcommand{\gpl}{\; g\cdot L^{-1}}
+\newcommand{\gpmol}{\; g\cdot mol^{-1}}
+\newcommand{\mpl}{\; mol\cdot L^{-1}}
+\newcommand{\mps}{\; m\cdot s^{-1}}
+\newcommand{\kph}{\; km\cdot h^{-1}}
+\newcommand{\mpss}{\; m\cdot s^{-2}}
+\newcommand{\es}[1]{\cdot10^{#1}}
+\newcommand{\eng}[1]{\textcolor{purple}{(= #1})}
+\usepackage{harpoon}
+\newcommand*{\vect}[1]{\overrightharp{\ensuremath{#1}}}
+\newcommand*{\Vect}[1]{\overrightarrow{\ensuremath{#1}}}
+
+% Chimie ---------------------------------
+\newcommand{\oxo}{\ce{H3O+}_{(aq)}}
+\newcommand{\eau}{\ce{H2O}_{(\ell)}}
+\newcommand{\OH}{\ce{HO-}_{(aq)}}
+\newcommand{\AH}{\ce{AH}_{(aq)}}
+\newcommand{\A}{\ce{A-}_{(aq)}}
+
+% Environnements ------------------------
+\newcounter{exo}
+\newenvironment{exo}[1][]
+{\refstepcounter{exo} \begin{shaded}\noindent $\triangleright \quad$\textbf{Exercice~\theexo. #1} } { \end{shaded}}
+\newenvironment{eg}
+{\begin{shaded} \textbf{Exemples:} } { \end{shaded}}
+
+\newenvironment{defn}[1]
+{\begin{leftbar}\noindent \textbf{Définition :\textit{ \quad #1}} } { \end{leftbar}}
+
+\newenvironment{rmrq}
+{\begin{shaded} \textbf{Remarque.\quad } \itshape } { \end{shaded}}
+\newenvironment{python}
+{\begin{shaded} \textbf{A faire en PYTHON}\\ \itshape } { \end{shaded}}
+
+% Shading colour -----------------------------
+\definecolor{shadecolor}{gray}{0.9}
+
+\date{}
+\author{}
+
+\renewcommand*\contentsname{Résumé}
+
+
+
+
+
+
+

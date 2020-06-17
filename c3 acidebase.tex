@@ -1,0 +1,529 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,varioref,times}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage{lipsum}
+
+%to resume numbering in a list
+\usepackage{enumitem}
+
+%pour ecrire en français avec les accents
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % load a font with all the characters
+\usepackage{units}
+
+%Image-related packages
+\usepackage{wrapfig}
+\usepackage{float, graphicx}
+\graphicspath{ {./img/} }
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+
+
+%pour faire des cadres
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+%chemistry frmulae
+\usepackage{chemfig}
+\usepackage{chemformula}
+\usepackage[version=4]{mhchem}
+ 
+
+% Title & headers 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{SciPhy : Terminale spé}
+\rhead{Ch. 3 : Acides \& Bases}
+\chead{2020-28}
+\rfoot{Page \thepage}
+\lfoot{\textcopyright\; S Zayyani}
+\renewcommand{\footrulewidth}{0.1pt}% default is 0pt
+
+\title{\large Chimie - Chapitre 3 \\ \LARGE  Les réactions acidobasiques}
+
+\usepackage[explicit]{titlesec}
+    % Raised Rule Command:
+    % Arg 1 (Optional) - How high to raise the rule
+    % Arg 2 - Thickness of the rule
+    \newcommand{\raisedrulefill}[2][0ex]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
+    \titleformat{\section}{\Large\bfseries}{\thesection. }{0em}{#1\,\raisedrulefill[0.4ex]{1pt}}
+
+% pour ecrire sur +sieurs colonnes
+\usepackage{multicol}
+% \setlength{\columnseprule}{0.25pt}
+\setlength{\columnsep}{40pt}
+
+% Fusion de lignes de tableaux.
+\usepackage{multirow}
+
+% Position verticale des lettres dans la ligne de tableau.
+\usepackage{array}
+
+
+% MATH -----------------------------------------------------------
+\newcommand{\To}{\longrightarrow}
+\newcommand{\gpl}{\; g\cdot L^{-1}}
+\newcommand{\gpmol}{\; g\cdot mol^{-1}}
+\newcommand{\mpl}{\; mol\cdot L^{-1}}
+\newcommand{\mps}{\; m\cdot s^{-1}}
+\newcommand{\mpss}{\; m\cdot s^{-2}}
+\newcommand{\es}[1]{\cdot10^{#1}}
+\newcommand{\eng}[1]{\textcolor{purple}{(= #1})}
+
+
+% Chimie ---------------------------------
+\newcommand{\oxo}{\ce{H3O+}_{(aq)}}
+\newcommand{\eau}{\ce{H2O}_{(\ell)}}
+\newcommand{\OH}{\ce{HO-}_{(aq)}}
+\newcommand{\AH}{\ce{AH}_{(aq)}}
+\newcommand{\A}{\ce{A-}_{(aq)}}
+
+
+% Environnements ------------------------
+
+\newcounter{exo}
+\newenvironment{exo}[1][]
+ {\refstepcounter{exo} \begin{shaded}\noindent $\triangleright \quad$\textbf{Exercice~\theexo. #1} } { \end{shaded}}     
+
+\newenvironment{eg}
+ {\begin{shaded} \textbf{Exemples:} } { \end{shaded}}
+ 
+\newenvironment{defn}[1]
+ {\begin{leftbar}\noindent \textbf{Définition :\textit{ \quad #1}} } { \end{leftbar}} 
+ 
+\newenvironment{rmrq}
+ {\begin{shaded} \textbf{Remarque.\quad } \itshape } { \end{shaded}}
+
+% Shading colour -----------------------------
+\definecolor{shadecolor}{gray}{0.9}
+
+
+    
+\date{}
+\author{}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{2mm}
+
+\setlength{\intextsep}{6pt}%
+\setlength{\columnsep}{5pt}%
+
+\begin{document}
+\maketitle
+\vspace{-1cm}
+
+\begin{tcolorbox}[title=Notions de la classe de première à rappeler]
+calcul d'un logarithme ; solvatation d'un proton libre dans l'eau ; Concentration molaire
+%\tcblower
+\end{tcolorbox}
+
+\section*{Acides \& Bases}
+Nous avons vu une grande catégorie de réaction l'année dernière : les réaction d'oxydoréduction. Pour tout résumer en une phrase, les réactions rédox sont des réactions pendant lesquelles il y a un échange de un ou plusieurs électrons. Voici la raison pour laquelle l'étude des réaction rédox s'appelle de l'électrochimie. 
+
+Nous allons maintenant aborder le ``revers de la médaille'' : les réactions où il y a un échange de proton entre les réactifs, c'est à dire les réactions acido-basiques. 
+
+\subsection*{Le pH}
+
+\begin{defn}{pH }
+\begin{itemize}
+    \item L'acidité (ou la basicité) d'une solution dépend de la concentration des ions oxonium  $\oxo$ (i.e. protons libres associés aux molécules d’eau).
+    \item Le $pH$ d'une solution est une mesure de l'acidité/basicité de la solution.
+    \item Pour les solutions aqueuses diluées, le $pH$ dépend de la concentration des ions oxonium. Il est donné par la relation suivante : 
+    \[  pH = -\log{[\oxo]} \quad \Longleftrightarrow \quad [\oxo] = 10^{-pH}\] 
+    \item Le $pH$ est sans unité, et la concentration de la solution doit être exprimée en $\mpl$. 
+\end{itemize}
+\end{defn}
+
+\begin{rmrq} Il y a deux choses à remarquer concernant cette définition du $pH$. Dans un premier temps, comme c'est souvent le cas, cette relation n'est valable que pour une certaine gamme de concentration, et sa validité diminue dans les concentration trop élevée. Le deuxième point concerne la définition du $pH$. 
+
+Dans l'intérêt de la rigueur, la définition est $pH = -\log{\dfrac{[\oxo]}{c^0}}$ où $c_0 = 1\mpl$ et s'appelle la \emph{concentration standard}. Comme ça le terme à l'intérieur de la fonction $\log$ est bien sans unité, comme le $pH$. 
+\end{rmrq}
+
+\begin{exo}
+\begin{enumerate}
+    \item Calculer le $pH$ des solutions de concentration en ions oxonium suivantes : 
+    \begin{center}
+      \begin{tabular}{c c}
+        $1,0\es{-2} \mpl$ \quad ;  & $5,0\es{-3} \mpl$ \\
+        $4,3\es{-3} \mpl$ \quad ; & $2,0\es{-8} \mpl$ \\
+    \end{tabular}  
+    \end{center}
+    \item Calculer la valeur approchée de la concentration en ion oxonium des solutions des $pH$ suivants : $1,5 \quad ; \quad 3,0 \quad ; \quad 2,2 \quad ; \quad 7,7$.
+    \item Ecrire un encadrement de la valeur de la concentration en ions oxonium de la solution de $pH = 1,5$ si le $pH$ est donné à $\pm 0,1$ unité de $pH$. Est-il utile de donner trois chiffre significatifs? 
+\end{enumerate}    
+
+\textbf{Solution : }
+\begin{enumerate}
+    \item 
+    
+    %\begin{center}
+    \begin{tabular}{c||c|c|c|c}
+         $[\oxo](\mpl)$ & $1,0\es{-2}$  & $5,0\es{-3} $ & $4,3\es{-3}$ & $2,0\es{-3} $ \\ \hline
+         $pH$ &  $2,0$ & 2,3 & 2,4 & 7,7 
+    \end{tabular}    
+    \vspace{0.5cm}
+   % \end{center}
+    \item     
+    
+    %\begin{center}
+    \begin{tabular}{c||c|c|c|c}
+         $pH$ &  1,5 & 3,0 & 2,2 & 7,7  \\ \hline
+         $[\oxo](\mpl)$ & $3,2\es{-2}$  & $1,0\es{-3} $ & $6,3\es{-3}$ & $2,0\es{-8} $         
+    \end{tabular}    
+    %\end{center}
+    \vspace{0.5cm}
+    \item Selon l'énoncé, l'encadrement demandé correspond à $1,4 < pH < 1,6$ et donc 
+       \begin{align*}
+        [\oxo] &= 10^{-1,4} = 3,98\es{-2}\mpl \\
+        [\oxo] &= 10^{-1,6} = 2,51\es{-2}\mpl
+    \end{align*}    
+    et donc l'encadrement des concentration devient (en respectant les chiffres significatifs) : 
+    $$ 2,5\es{-2}\mpl < pH < 4,0 \es{-2}\mpl$$
+\end{enumerate}
+\end{exo}	
+
+\subsection*{Acides \& Bases}	
+
+C’est en classe de $3^e$ que l’on entend parler pour la première fois des acides et des bases, lors de notre étude d’\textit{attaque des métaux par des acides}. 
+On peut donner comme exemple la réaction entre l’acide chlorhydrique $\ce{HC\ell}$ et le métal cuivre $\ce{Cu}$.  Les produits de cette réaction étaient l’ion métallique $\ce{Cu^2+}$ (cuivre II) et l’ion chlorure $\ce{Cl-}$ (mis en évidence grâce au test de \ce{NaOH}), et un gaz explosif (le dihydrogène $\ce{H2}$  ).  Trouvons d’abord le bilan de cette réaction, et puis, son équation-bilan : $$2\ce{HC\ell} + \ce{Cu} \To 2\ce{C\ell-} + \ce{H2} + \ce{Cu^2+} $$
+
+Ici chaque atome de cuivre réagit avec deux molécules d’acide.  Si l'on voyait ce qui se passe à l'échelle des atomes dans les molécules, on verrait que lors de cette réaction deux ions d'hydrogène provenant de l’acide chlorhydrique sont libérés, et puis sont transféré à l'atome de cuivre.  Ce transfert de proton est bien ce qui caractérise une réaction acido-basique. 
+
+\begin{defn}{Acide \& Base}
+\begin{itemize}
+    \item Une réaction acido-basique est caractérisée par un \textbf{transfert de proton $\ce{H+}$} entre un acide et une base.
+    \item Un \textbf{acide} est une entité chimique capable de \textbf{libérer/céder un proton}  : $\ce{Acide} \To \ce{X} + \ce{H+}$
+    \item Un \textbf{base} est une entité chimique capable de \textbf{capter un proton}  : $\ce{Base} + \ce{H+} \To \ce{Y}$
+\end{itemize}    
+\end{defn}
+
+\section*{Le couple acide/base}
+
+Désormais on utilise la convention simplifiée suivante : $\ce{AH}$ représente un acide, et $\ce{A-}$ représente une base.  Si l'on réécrit la définition d'un acide nous avons : $\ce{AH} \To \ce{A-} + \ce{H+}$. 
+Mais la réaction inverse serait :   $\ce{A-} + \ce{H+} \To \ce{AH}$. Mais on voit clairement que cette dernière correspond à la définition d’une base, où $ \ce{A-}$ est la base :$\ce{A-}$ est simplement la base associée à l’acide $\ce{AH}$, ou plus précisément $\ce{A-}$  est la \textbf{base conjuguée} de l’acide $\ce{AH}$.  
+
+\begin{defn}{Couple acide/base}
+\begin{itemize}
+    \item Deux entités chimiques constituent un couple acide/base s’il est possible \textbf{de passer de l’une à l’autre par perte ou gain d’un proton}
+    \item L’acide est noté AH, la base $\ce{AH}$  et le couple $\ce{A-} / \ce{A-}$(l’\textbf{acide est toujours noté en premier})
+    \item $\ce{A-}$ est la base conjuguée de l’acide $\ce{AH}$, et $\ce{AH}$ est l’acide conjugué de la base $\ce{A-}$.
+    \item Comme avec les réaction rédox, il existe une notation compacte pour ces demi-équation acido-basiques, où $`` = "$ signifie les deux réactions opposées du couple: 
+    $$\ce{AH} = \ce{A-} + \ce{H+} $$ 
+\end{itemize}
+\end{defn}
+
+Voici un exemple de quelques couples acide/bases que l'on voit très souvent : 
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}{.53\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{imgs/c3/tableAB.jpg}  
+\end{subfigure}
+\begin{subfigure}{.46\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{imgs/c3/tableACIDES.jpg}  
+\end{subfigure}
+\caption{Quelques exemples des couples acide/base.}
+\end{figure}
+
+Si l'on regarde le bas du tableau précédent, on constate que l'eau est listée comme base mais aussi comme acide, et dans deux couples différents, une fois avec l'oxonium, et une fois avec l'ion hydroxyle: 
+
+\begin{itemize}
+    \item Dans le couple $ \oxo/\eau \quad$ : $\quad \oxo = \eau + \ce{H+}$
+    \item Dans le couple $ \eau / \OH \quad $ : $\quad \eau = \OH + \ce{H+}$
+\end{itemize}
+
+Dans le premier cas l’eau est la base, le récipient du proton.  Tandis que dans le deuxième cas, l’eau est l’acide, car c’est elle qui libère le proton.  On dit que l’eau un \textbf{ampholyte (adj. amphotère)}\eng{Amphoteric compound} ;  c'est-à-dire une espèce chimique qui appartient à deux couples acide/base, $ \oxo/\eau$ et $ \eau / \OH$.  
+
+Elle est une espèce qui se comporte comme un acide ou une base selon la situation (en présence d’une base, comme un acide ; en présence d’un acide, comme une base). C'est le cas de beaucoup d'autres espèces chimiques. En effet, dès qu'il s'agit d'un \emph{poly-acide} (acide capable de céder plusieurs protons, comme l'acide sulfurique ou acide phosphorique) il y a au moins un ampholyte. 
+
+\begin{eg} % ---------------- exemple amhpolyte-------------
+\begin{itemize}
+    \item Acide sulfurique : $\ce{H2SO4}$ : 
+    \begin{itemize}
+        \item Première acidité : $\ce{H2SO4} = \ce{HSO4-} + \ce{H+}$
+        \item Deuxième acidité : $\ce{HSO4-} = \ce{SO4^2-} + \ce{H+}$
+    \end{itemize}
+    Ici l'ion hydrogénosulfate $\ce{HSO4-}$ est un ampholyte. 
+    \item Acide phosphorique : $\ce{H3PO4}$ : 
+    \begin{itemize}
+        \item Première acidité : $\ce{H3SO4} = \ce{H2PO4-} + \ce{H+}$
+        \item Deuxième acidité : $\ce{H2PO4-} = \ce{HPO4^2-} + \ce{H+}$
+        \item Troisième acidité : $\ce{HPO4^2-} = \ce{PO4^3-} + \ce{H+}$
+    \end{itemize}    
+    Ici les ions $\ce{HPO4^2-}$ et $\ce{H2PO4-}$ sont amphotères. 
+\end{itemize}
+\end{eg}
+
+\section*{Réaction acido-basique}% --------------- SECTION------------
+
+\begin{defn}{Réaction acido-basique}
+\begin{itemize}
+    \item Lors d'une réaction acido-basique il y a un \textbf{échange de proton}\eng{proton exchange} entre les deux réactifs. 
+    \item Une réaction acido-basique fait \textbf{intervenir deux couples acide/base}. 
+    \item Réaction est, forcément, \textbf{entre l'acide d'un couple et la base de l'autre}. 
+\end{itemize}
+\end{defn}
+
+Considérons deux couples d'acide/base quelconque : $\ce{A1H}/\ce{A1-} \quad $ et $\quad \ce{A2H}/\ce{A2-}$. Les demi-équations associées sont : 
+$$ \ce{A1H} = \ce{A1-} + \ce{H+}\quad \text{et}\quad \ce{A2H} = \ce{A2-} + \ce{H+}$$
+
+Afin d'avoir un échange de protons il faut une espèce qui cède le proton (l'acide) et l'autre qui le capte (la base), c'est à dire, sans plus d'information, il y a deux possibilités pour ces deux couples : soit l'acide du premier couple réagit avec la base du deuxième couple, soit c'est la base du premier couple avec l'acide du deuxième couple. 
+
+Prenons le premier cas (un seul cas suffit, comme illustration). Les démi-réactions seront donc : 
+\begin{align*}
+    \ce{A1H} &\To \ce{A1-} + \ce{H+} \\
+    \ce{A2-} + \ce{H+} &\To \ce{A2H}
+\end{align*}
+
+La réaction finale, c'est à dire la réaction acido-basique entre les deux couples est la somme de ces deux demi-réactions : 
+
+$$\ce{A1H} + \ce{A2-} + \ce{H+} \To \ce{A2H} + \ce{A1-} + \ce{H+} $$
+
+Il y a un proton $\ce{H+}$ des deux côtés, et donc la réaction simplifiée est  : 
+
+$$\ce{A1H} + \ce{A2-} \To \ce{A2H} + \ce{A1-} $$
+
+\begin{rmrq}
+Dans un sens le proton transféré ne figure pas dans l’équation chimique. Mais dans un autre sens cette équation montre le transfert d’un proton de l’acide $\ce{A1H}$ à la base $\ce{A_2^-}$. 
+
+Dans les demi-équations on utilise = mais dans la réaction a/b on utilise plutôt → car il s’agit d’une véritable réaction chimique. 
+
+\end{rmrq}
+
+\begin{exo}
+Indiquer en dessous de l’équation l’acide et la base pour les réactifs et les produits, et compléter l’équation. 
+\begin{enumerate}
+    \item $\ce{CH3COOH}_{(aq)} + \OH \To $
+    \item $\ce{C6H5COO-}_{(aq)} + \oxo \To$
+    \item $\oxo + \OH \To $
+    \item $\ce{NH3}_{(aq)} + \eau \To $
+    \item $\ce{NH4+}_{(aq)} + \eau \To $
+\end{enumerate}
+\end{exo}
+
+\section*{Réaction avec l'eau}% --------------- SECTION------------
+
+Nous allons maintenant se poser la question du comportement des acides dans l'eau, surtout car la plupart des solutions acides ou basiques sont des solutions aqueuse, et donc le comportant d'un acide ou d'une base est primordiale pour la compréhension de la suite. 
+
+
+\subsection*{Autoprotolyse de l'eau}
+  
+Mais d'abord on peut se poser la question de la nature acide ou basique de l'eau. On peut répondre à cette question si on donne la(les) demi-équation(s) contenant de l’eau.  Il y en a deux :
+
+\begin{itemize}
+    \item Couples $\ce{H3O+}/\ce{H2O}$ dont la demi-équation :$\ce{H3O+} = \ce{H2O} + \ce{H+}$
+    \item Couple $\ce{H2O} / \ce{H2O} $ dont la demi-équation : $\ce{H2O} = \ce{HO-} + \ce{H+}$
+\end{itemize}
+	
+On voit donc que la molécule d'eau est amphotère. Tournons-nous maintenant vers une réaction très importante qui dépend, justement, de cette caractère amphotère de l'eau. 
+
+\begin{defn}{L'autoprotolyse de l'eau\eng{self-ionization of water}}
+\begin{itemize}
+    \item La réaction acido-basique qui a lieu \textbf{entre deux molécules d’eau} dans toute solution aqueuse est appelée réaction d’autoprotolyse de l’eau.  Elle est représentée par l’équation suivante : 
+    \begin{align*}
+        \eau + \eau  &\rightleftharpoons \OH + \oxo \\
+        2\eau  &\rightleftharpoons \OH + \oxo
+    \end{align*}
+    \item C’est une réaction très \textbf{limitée} 
+\end{itemize}
+\end{defn}
+
+\begin{defn}{Produit ionique de l’eau}
+\begin{itemize}
+    \item Le produit ionique de l’eau, noté $K_e$, est donnée par : 
+    \[ K_e = [\oxo][\OH]\]
+    \item A une température donnée, le produit ionique de l’eau a la même valeur pour toute solution aqueuse. A température ambiante (i.e. $25\degree C$) $K_e = 1,0\es{-14}$. 
+\end{itemize}
+\end{defn}
+
+\begin{exo}
+Le $pH$ d’une solution aqueuse d’un acide $\ce{AH}$ est égal à $3,5$ à $25\degree C$. A partir de la définition du $pH$ donner la concentration de la solution en ions oxonium. En déduire la concentration de la solution en ions hydroxyde. 
+\vspace{3cm}
+\end{exo}
+ 
+\begin{exo}
+Les solutions basiques sont souvent riches en ions hydroxyde. Si la concentration en ions hydroxyde $[\OH]_{éq}$  d’une solution à l’équilibre est connue, on peut déterminer le $pH$ en utilisant le produit ionique de l’eau. Déterminer l’expression du $pH$ en fonction de $K_e$ et de $[\OH]_{éq}$.  
+\vspace{3cm}
+\end{exo} 
+
+\section*{La constante d'acidité} % --------------- SECTION------------
+Comme toutes réactions chimiques, les réactions acido-basiques se trouvent souvent en équilibre chimique, et peuvent donc être caractérisées par une constante d’équilibre, notée $K_a$. 
+
+
+% \begin{wraptable}{l}{0.35\textwidth}
+% \begin{tabular}{c||c}
+% Couple acide/base & pK_a \\ \hline
+% \oxo/\eau & 0,00 \\ 
+% \ce{HF}_{(aq)}/\ce{F-}_{(aq)} & 3,20 \\ 
+% \ce{HCOOH}_{(aq)}/\ce{HCOO-}_{(aq)} & 3,75 \\ 
+% \ce{CH3COOH}_{(aq)}/\ce{CH3COO-}_{(aq)} & 4,76 \\ 
+% \ce{NH4+}_{(aq)}/\ce{NH3}_{(aq)} & 10,3 \\ 
+% \ce{HCO3-}_{(aq)}/\ce{CO3^2-}_{(aq)} & 10,3 \\ 
+% \eau/\OH & 14,0
+% \end{tabular}
+% \caption{Quelques couples acide/base et leurs $pK_a$}
+% \end{wraptable}
+\begingroup
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{imgs/c3/ka.jpg}
+\end{wrapfigure}
+
+\begin{defn}{Constante d'acidité\eng{acid dissociation constant}}
+\begin{itemize}
+    \item La constante d’équilibre de la réaction d’un acide $AH$ avec l’eau est notée $K_a$. On l’appelle \textbf{constante d’acidité} du couple $\ce{AH}_{(aq)}/\ce{A-}_{(aq)} $ .  
+    \item La réaction de la mise en solution de $AH$ est :
+    \[\ce{AH}_{(aq)} + \eau \rightleftharpoons \ce{A-}_{(aq)} + \oxo \]
+    avec la constante d'acidité 
+    \[ K_a = \dfrac{[\oxo]_{éq}\cdot[ \ce{A-}]_{éq} }{ [\ce{A-}]_{éq} }  \]
+    \item A partir de la constante d'acidité nous définissons le $pK_a$, qui caractérise le couple acide/base : 
+    \[
+    pK_a = -\log(K_a) \Longleftrightarrow K_a = 10^{-pK_a}
+    \]
+\end{itemize}
+\end{defn}
+
+\endgroup
+
+\begin{rmrq}
+
+L'acidité d'une solution aqueuse est en fait dûe à la présence des ions oxonium $ \oxo $ dans la solution. 
+
+Il est courant, par exemple, qu’on parle tout simplement d’acide sulfurique pour désigner la solution aqueuse.  Or, pour l’acide sulfurique, cette appellation est impropre, car on confond alors l’acide sulfurique, et la solution obtenue en faisant réagir l’acide avec l’eau. 
+
+Plus le $pK_a$ du couple est grand (ou plus la constante $K_a$  est petite) moins l’acide se dissocie dans l’eau. 
+
+Certains acides comme $\ce{HC\ell}$ (acide chlorhydrique), $\ce{HNO3}$ (acide nitrique), $\ce{H2SO4}$  (acide sulfurique) réagissent de manière \textbf{totale}. Ils ont donc une constante $K_a$  très élevée, et un $pK_a$  négatif. Ces acides ne peuvent pas exister sous forme moléculaire dans l’eau. 
+\end{rmrq}
+
+\begin{exo}
+Pour augmenter le $pH$ d'une piscine on ajoute du carbonate de sodium $\ce{Na2CO3}_{(g)}$. L'ion carbonate réagit avec l'eau. La constante 
+d'acidité du couple $ \ce{HCO3-}_{(aq)}/\ce{CO3^2-}_{(aq)} $ est égale à : $K_a_1 = 5,0\es{-11}$
+\begin{enumerate}
+    \item L'eau réagit-elle en tant que base ou en tant qu'acide? Quel est le couple de l'eau impliqué? 
+    \item Donner les expressions des constantes d'acidités $K_A_1$ du couple $ \ce{HCO3-}_{(aq)}/\ce{CO3^2-}_{(aq)} $ et $K_A_2$ du couple de l'eau impliqué. Quelle est 1a va1eur de $K_a-2$ à $25\degree C$?
+    \item Écrire l'équation de la réaction acido-basique qui a lieu. 
+    \item Exprimer puis calculer sa constante d'équilibre à $25\degree C$. 
+\end{enumerate}
+\end{exo}
+
+\section*{Force des acides et des bases}% --------------- SECTION------------
+
+\begin{defn}{Acide fort \& faible}
+\begin{itemize}
+    \item 	On dit qu’un acide est d’autant \textbf{plus fort} que le taux d’avancement final $\tau = \dfrac{x_{éq}}{x_{max}}$ de sa réaction avec l’eau est grand.
+    \item Un acide $\ce{AH}$ est dit \textbf{fort} si toutes les entités introduites dans l’eau se dissocient en libérant un ion hydrogène $\ce{H+}$.  La réaction avec l’eau est donc totale : 
+    \[ \ce{AH} + \eau \To \ce{A-} + \oxo  \]
+    \item Un acide $\ce{AH}$ est dit \textbf{faible} si une partie seulement des entités introduites dans l’eau se dissocient en libérant un ion hydrogène $\ce{H+}$.  La réaction avec l’eau est donc limitée : 
+    \[ \ce{AH} + \eau \rightleftharpoons \ce{A-} + \oxo  \]
+    \item 	A température et à concentration de soluté apporté égales, un acide $\ce{AH}$ est d’autant plus fort que la valeur du $pK_a$  est faible. 
+    \item Pour une concentration molaire $c$ comprise entre $ 10^{-1} \sim 10^{-6} \mpl$, le $pH$ d’une solution d’acide fort est : $pH=-\log(c)$
+\end{itemize}
+\end{defn}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{imgs/c3/forceacides.jpg}
+\end{figure}
+
+\section*{Diagrammes de prédominance}% --------------- SECTION------------
+
+Considérons le couple $\ce{AH}_{(aq)}/\ce{A-}_{(aq)} $. La constante d'acidité s'écrit : 
+\begin{align*}
+    K_a &= \dfrac{[\oxo]_{éq}\cdot[ \ce{A-}]_{éq} }{ [\ce{AH}]_{éq} }   \\
+    &= \dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} }\cdot [\oxo]_{éq} 
+\end{align*}
+Le $pK_a$ est donc : 
+
+\begin{align*}
+    pK_a &= -\log(K_a) \\ 
+    &= -\log\Bigg(\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} }\cdot [\oxo]_{éq} \Bigg) \\
+    &= -\log\Bigg(\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } \Bigg) - \log\Bigg( [\oxo]_{éq} \Bigg)\\
+    &= -\log\Bigg(\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } \Bigg) - pH
+\end{align*}
+
+Et nous obtenons la relations : 
+\[ pH = pK_a +  \log\Bigg(\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } \Bigg) \]
+
+que nous pouvons réecrire aussi : 
+\[ \dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} }  =  10^{pH - pK_a}\]
+
+A partir de ces deux relations, notamment la dernière nous pouvons déterminer l’\textbf{espèce prédominante} en fonction du $pH$ de la solution (i.e. est-ce que c’est la forme acide ou basique qui présente en majorité). C’est-à-dire :
+\begin{itemize}
+    \item si $pH = pK_a \Rightarrow \log\Bigg(\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } \Bigg)  = 0 $ \textbf{soit} $\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } = 1 $
+    \item si $pH = pK_a \Rightarrow \log\Bigg(\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } \Bigg)  > 0 $ \textbf{soit} $\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } > 1 $
+    \item si $pH = pK_a \Rightarrow \log\Bigg(\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } \Bigg)  < 0 $ \textbf{soit} $\dfrac{[\ce{A-}]_{éq} }{ [\ce{AH}]_{éq} } < 1 $
+\end{itemize}
+
+Nous pouvons visualiser ces trois régimes grâce à un diagramme de prédominance
+
+\begin{defn}{Diagramme de préodominance}
+\begin{itemize}
+    \item Dans un système chimique, on dit qu’une espèce A est prédominante par rapport à une espèce B si [A]>[B]
+    \begin{itemize}
+        \item Si $pH = pK_a \longrightarrow [\ce{A-}]_{éq} =[AH]_éq $ donc il n’y a pas d’espèce prédominante. 
+        \item Si $pH > pK_a \longrightarrow [\ce{A-}]_{éq} >[AH]_éq $ donc c'est la forme basique qui prédomine. 
+        \item Si $pH < pK_a \longrightarrow [\ce{A-}]_{éq} <[AH]_éq $ donc c'est la forme acide qui prédomine.  
+    \end{itemize}
+    \item Un diagramme de prédominance représente les zones de $pH$ où les espèces d’un couple acide/base prédominent, comme dans la figure ci-après. 
+\end{itemize}
+\end{defn}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{imgs/c3/predom.png}
+    \caption{Diagramme de prédominance pour le couple $\ce{AH}_{(aq)}/\ce{A-}_{(aq)} $}
+\end{figure}
+
+\newpage
+
+\section*{Titrage $pH$-métrique}% --------------- SECTION------------
+
+Lors d’un titrage pH-métrique, le $pH$ est mesuré après chaque ajout de solution titrante. Contrairement à un titrage avec utilisation d’un indicateur coloré, la solution titrante continue à être versée au-delà de l’équivalence. Nous obtenons de cette manière des $pH$ en ordonnées et des volumes en abscisses, qui nous donnent après avoir été reportés dans un graphique, la courbe du titrage acido-basique (cf. figure ci-après). 
+\begin{itemize}
+    \item La partie AB où les variations des $pH$ sont assez faibles, avant l’équivalence
+    \item La partie BC, appelée « \textbf{la zone de virage} » ou « \textbf{le saut de $pH$} », où se trouve le \textbf{point d’équivalence}
+    \item La partie CD où le $pH$ se stabilise, après l’équivalence.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c3/titreAB.png}
+    \caption{Méthode des tangentes à gauche \& méthode des dérivées à droite}
+\end{figure}	 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c3/xo1.jpg}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c3/xo2.jpg}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c3/xo3.jpg}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c3/xo4.jpg}
+\end{figure}
+
+\end{document}
