@@ -2,7 +2,6 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
 \input{preamble}
 
-\new
 % Title & headers 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -54,7 +53,7 @@ calcul d'une dérivée ; vitesse d'un point ; vecteur ; trigonométrie
     \caption{Une base cartésienne}    
 \end{wrapfigure}
 
-Nous avons appris en classe de $2^{nde}$, que tout mouvement est décrit relatif à un point de référence, appelé le « référentiel ».  Afin donc, de repérer un point (et, par la suite, de décrire son mouvement dans l’espace) il nous faut :
+Nous avons appris en classe de $2^{nde}$, que tout mouvement est décrit relatif à un point de référence, appelé le « référentiel »\eng{frame of reference, \textit{FOR}}.  Afin donc, de repérer un point (et, par la suite, de décrire son mouvement dans l’espace) il nous faut :
 
 \begin{itemize}
     \item Un point de référence, appelé l'origine. 
@@ -64,7 +63,7 @@ Nous avons appris en classe de $2^{nde}$, que tout mouvement est décrit relatif
 
 \endgroup
 
-Pour définir le mouvement d’un point (ou d’un corps) dans un plan (2-D) on a besoin de deux axes orthogonaux, ou de deux vecteurs unitaires\eng{unitary vectors}orthogonaux ($\Vec{i}, \Vec{j}$).  Par extension, une description en 3-D nécessite, également, trois axes orthogonaux, ou trois vecteurs unitaires orthogonaux ($\Vec{i}, \Vec{j}, \Vec{k}$).   
+Pour définir le mouvement d’un point (ou d’un corps) dans un plan (2-D) on a besoin de deux axes orthogonaux, ou de deux vecteurs unitaires\eng{unitary vectors} orthogonaux ($\Vec{i}, \Vec{j}$).  Par extension, une description en 3-D nécessite, également, trois axes orthogonaux, ou trois vecteurs unitaires orthogonaux ($\Vec{i}, \Vec{j}, \Vec{k}$).   
 
 \begin{rmrq}
 Il est possible, ou parfois préférable, de définir d’autres repères non-orthogonaux (e.g. cylindrique, sphérique, …) selon la situation ou le mouvement. 
@@ -74,7 +73,7 @@ Vu que le mouvement d’un corps s’effectue dans le temps, il faut aussi un re
 
 \subsection{Référentiel Galiléen}
 
-Il s'agit d'un référentiel dans lequel un objet isolé (sur lequel ne s’exerce aucune force ou sur lequel la résultante des forces est nulle) est soit immobile, soit en mouvement de translation rectiligne uniforme. Cela signifie que le principe d’inertie, qui est énoncé dans la première loi de Newton, s’y applique.
+\eng{Galilean or inertial \textit{FOR}}Il s'agit d'un référentiel dans lequel un objet isolé (sur lequel ne s’exerce aucune force ou sur lequel la résultante des forces est nulle) est soit immobile, soit en mouvement de translation rectiligne uniforme. Cela signifie que le principe d’inertie, qui est énoncé dans la première loi de Newton, s’y applique.
 
 \begin{rmrq}
 La définition d'un référentiel galiléen apparaît fondamentale et est souvent formulée ainsi : « Un référentiel galiléen est un référentiel dans lequel la première loi de Newton est vérifiée. »
@@ -93,7 +92,7 @@ Nous reverrons cette notion dans le chapitre sur les lois de Newton.
 \section{Position, Vitesse \& Accélération}
 
 \begingroup
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{r}{0.35\textwidth}
     \centering
     \includegraphics[width=0.9\linewidth]{imgs/p1/OM.jpg}
 \caption{Vecteur position $\Vect{OM}$ en base cartésienne}
@@ -106,12 +105,11 @@ Une fois le repère et le système des coordonnées choisi nous pouvons définir
 Dans un référentiel donné, on donne la position d’un point grâce à un vecteur : le vecteur-position. 
 
 \begin{itemize}
-    \item Le vecteur-position sert à indiquer la position d’un point par rapport à un repère. 
+    \item Le \textbf{vecteur-position} sert à indiquer la position d’un point par rapport à un repère. 
     \item \textbf{L’origine du vecteur} se situe à l’origine du repère, l’autre extrémité du vecteur se trouve à l’endroit du point. Pour un point $M$ dans un référentiel dont l’origine est $O$, le vecteur position est le vecteur joignant $O$ à $M$.
 \end{itemize}
 
 \endgroup
-
 \newpage
 Dans un système de coordonnées cartésiennes (i.e. généré par des vecteurs unitaires ($\Vec{i}, \Vec{j}, \Vec{k}$) le vecteur-position $\overrightarrow{OM}$ prend la forme :
 \begin{align*}
@@ -256,7 +254,7 @@ Dans le repère cartésien $(O,x,y,z)$, la trajectoire d’un point est décrite
 \subsection{Accélération}
 
 \begingroup
-\begin{wrapfigure}{l}{0.3\textwidth}
+\begin{wrapfigure}{l}{0.25\textwidth}
     \centering
     \includegraphics[width = 0.9\linewidth]{imgs/p1/acceleration.jpg}
     \caption{Le vecteur variation du vecteur vitesse $\Delta\vec{v}$}
@@ -280,7 +278,7 @@ Dans le repère cartésien $(O,x,y,z)$, la trajectoire d’un point est décrite
 \end{defn}
 \endgroup
 
-Raisonnant comme dans le cas du vecteur-vitesse, en prenant des intervalles Δt de plus en plus courts, on se rapproche de la valeur instantanée de l'accélération, y arrivant dans la limite de $\Delta t \rightarrow 0 $ : 
+Raisonnant comme dans le cas du vecteur-vitesse, en prenant des intervalles $\Dt$ de plus en plus courts, on se rapproche de la valeur instantanée de l'accélération, y arrivant dans la limite de $\Delta t \rightarrow 0 $ : 
 \begin{align*}
     \Vec{a}_{inst} &= \lim_{\Delta t \to 0} \Vec{a}_{moy} \\ 
     &= \lim_{\Delta t \to 0} \dfrac{\Vec{v}(t + \Delta t) - \Vec{v}(t)}{\Delta t} \\
@@ -318,18 +316,202 @@ L'accélération est donc la dérivée seconde de la position :
 
 \section{Mouvement rectiligne \& circulaire}
 
-Dans notre étude du mouvement, on fait la distinction entre deux types de mouvements : mouvement rectiligne \eng{rectilinear}, et mouvement circulaire; mais maintenant nous pouvons définir ces mouvements, de manière très précise, en évoquant les définitions dans la partie précédente. 
-
+Dans notre étude du mouvement, on fait la distinction entre deux types de mouvements : mouvement rectiligne, et mouvement circulaire; mais maintenant nous pouvons définir ces mouvements, de manière très précise, en évoquant les définitions dans la partie précédente. 
+\begin{defn}{Mouvement rectiligne \eng{rectilinear motion}}
 \begin{itemize}
-    \item Un mouvement est dit rectiligne 
+    \item Un mouvement est dit \textbf{rectiligne} si lors du mouvement le vecteur-vitesse \textbf{conserve sa direction et son sens}. 
+    \begin{itemize}
+        \item Si la norme du vecteur-vitesse ne change pas, le mouvement est rectiligne \textbf{uniforme} ;
+        \item Si la norme du vecteur-vitesse change, le mouvement est rectiligne accéléré (si l'accélération est constante, on dit \textit{uniformément} accéléré);
+    \end{itemize}
+\end{itemize}
+\end{defn}
+
+On voit clairement donc qu'il s'agit bien d'un \textbf{mouvement de translation}. 
+
+\begin{defn}{Mouvement curviligne \eng{curvilinear motion}}
+\begin{itemize}
+    \item Si, lors de son mouvement, le vecteur-vitesse d’un corps \textbf{ne conserve pas sa direction} (i.e. il n’a pas une trajectoire de droite) le mouvement du corps est \textbf{curviligne}.
+    \item Si la trajectoire décrite est un cercle, le mouvement est dit circulaire.
+    \begin{itemize}
+        \item Si la norme du vecteur-vitesse reste inchangée, le mouvement est circulaire uniforme. 
+        \item Si la norme du vecteur-vitesse change, le mouvement est circulaire accéléré. 
+    \end{itemize}
+\end{itemize}
+\end{defn}
+
+\begin{exo}
+
+\begin{wrapfigure}{r}{0.2\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{imgs/p1/circletang.gif.jpg}
+\end{wrapfigure}
+Montrer graphiquement que $v$ est bien co-linéaire avec $\Vect{\Delta OM} $. 
+\vspace{3cm}
+\end{exo}
+
+\subsection{Repère de Frenet : mouvement circulaire}
+
+D'abord, dans le langage vectoriel, un mouvement circulaire d'un point $M$ correspond à la rotation du vecteur-position $ \Vect{OM}$ autour de son origine $O$. Il est intéressant de noter que ceci est vrai pour le vecteur vitesse du point en mouvement aussi, mais restant toujours tangente à la trajectoire du point $M$! 
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{imgs/p1/tangent.png}
+\end{wrapfigure}
+
+Nous sommes particulièrement intéressé par des mouvements circulaires, même si l'on pourrait penser qu'une mouvement curviligne, étant plus général qu'un mouvement circulaire pourrait nous intéresser davantage. Un mouvement circulaire est plus facile à étudier. Mais encore plus important, une trajectoire curviligne peut être assimilée à une série d'arcs circulaires ! Et donc savoir décrire un mouvement circulaire nous suffit, pour décrire tout mouvement curviligne. 
+
+Il est très utile de changer le système des coordonné pour des mouvements circulaires. Un repère bien adapté à l'étude des mouvements circulaires s'appelle le \textbf{repère de Frenet}. 
+
+\begin{defn}{Repère de Frenet}
+\begin{itemize}
+    \item Le repère de Frenet est \textbf{un repère ortho-normal local}, avec des vecteurs unitaires de bases \textbf{$\vec{u_t}$ et $\vec{u_n}$}. 
+    \item $\vec{u_t}$, parfois noté $\vec{e_t}$ ou simplement $\Vect{T}$ s'appelle le \textbf{vecteur tangent} unitaire, et est toujours dans la direction tangente à la courbe au point $M$.
+    \item $\vec{u_n}$, parfois noté parfois noté $\vec{e_n}$ ou simplement$\Vect{N}$ s'appelle le \textbf{vecteur normal} unitaire, et est toujours dans la direction perpendiculaire à la tangente à la courbe au point $M$ et vers le centre du cercle. 
+\end{itemize}
+\end{defn}
+
+Comme nous avons déjà expliqué, lors d’une accélération on modifie soit la norme, soit la direction/sens du vecteur-vitesse. S’il s’agit d’une modification seulement de la norme (la direction/sens du mouvement reste inchangé), alors seule la composante tangentielle du mouvement est modifiée, dans le repère de Frenet. Mais si c’est la composante normale du vecteur-vitesse, alors nous allons modifier la trajectoire aussi (i.e. la direction/sens du mouvement).   
+
+Et donc de manière générale l'accélération d'un point est constituée d'une composante tangentielle (due à la variation de la norme de son vecteur-vitesse) et d'une composante normale (ou radiale, ou centripète, tous des différents mots équivalents) qui est due à la variation de sa direction. La forme littérale générale est donc :
+\begin{align*}
+    \va(t) &= \va_t(t) + \va_n(t) \\
+    \va(t) &= a_t(t)\cdot \vec{u}_t + a_n(t)\cdot \vec{u}_n \\
+\end{align*}
+\subsection{Vitesse angulaire}
+
+\begin{wrapfigure}{r}{0.25\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{imgs/p1/rads.jpg}
+\end{wrapfigure}
+
+\begin{defn}{Vitesse angulaire \eng{angular speed/velocity}}
+\begin{itemize}
+    \item Pour un point en mouvement circulaire, la vitesse angulaire moyenne est  : 
+    \[
+    \omega = \dfrac{\Delta\theta}{\Dt}  \quad où \quad
+    \begin{cases}
+    \theta &\rightarrow \text{Angle parcouru en } rad \\
+    t &\rightarrow \text{temps du parcours en} s \\
+    \omega &\rightarrow \text{vitesse en angulaire en }\rps 
+    \end{cases}
+    \]
+    \item La vitesse angulaire instantanée est :
+    \[
+    \omega = \od{\theta}{t}
+    \]
+    \item Si la vitesse angulaire est constante, c’est-à-dire $\od{\omega}{t} = 0$ le mouvement est alors \textbf{circulaire et uniforme}. \textit{Important : un mouvement circulaire uniforme est toujours un mouvement accéléré !}
+\end{itemize}
+\end{defn}
+
+\begin{wrapfigure}{l}{0.25\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{imgs/p1/rads4.jpg}
+\end{wrapfigure}
+
+Trouvons alors une relation entre la vitesse angulaire et la vitesse ‘normal’ (i.e. de translation). Nous savons que : 
+\[
+s = r\cdot \theta \quad \text{où} \quad
+    \begin{cases}
+    s &\rightarrow \text{distance parcouru en } m \\
+    r &\rightarrow \text{rayon du cercle en } m \\
+    \theta &\rightarrow \text{angle parcouru en }rad 
+    \end{cases}
+\]
+
+Prenons la dérivée par rapport au temps des deux côtés de l’équation précédente : 
+\[
+\od{s}{t} = \od{(r\cdot\theta)}{t}
+\]
+
+Le rayon du cercle étant constant 
+
+\[
+\od{s}{t} = r\cdot\od{(\theta)}{t}
+\]
+
+Mais $\od{s}{t}$ est simplement l’expression de la vitesse $v$, et $\od{\theta}{t}$ est l’expression de la vitesse angulaire $\omega$ . Nous avons donc : \[ v = r\cdot\omega  \Longleftrightarrow \omega = \dfrac{v}{r} \]
+
+et donc en notation vectorielle : $ \vec{v} = r\cdot\omega \vec{u_t} $
+
+\subsection{Accélération}
+
+L'accélération a déjà été définie comme une mesure de la variation du vecteur-vitesse. Or un vecteur-vitesse possède une norme et une direction/sens, et donc une variation du vecteur-vitesse peut être du à une variation de la norme ou de sa direction ou sens. La conséquence de ce fait est qu'il existe deux type d'accélération : 
+\begin{itemize}
+    \item Accélération \textbf{tangentielle} : $\va_t$
+    \item Accélération \textbf{normale}, ou \textbf{centripète}\eng{\textbf{centripetal}} :  $\va_n$
 \end{itemize}
 
+En absence d'une composante normale, le mouvement est purement rectiligne, c'est à dire un mouvement de translation, et nous avons donc : 
+\begin{align*}
+    \va(t) = \va_t(t) &= \od{\vv}{t} \\
+    &= \od{v_x(t)}{t}\cdot \Vec{i} + \od{v_y(t)}{t}\cdot \Vec{j} + \od{v_z(t)}{t}\cdot \Vec{k} 
+\end{align*}
+Et nous avons donc 
+\[
+a_t(t) = \od{v(t)}{t} \quad \text{et} \quad \va_t(t)= \od{v(t)}{t}\cdot \vec{u}_t
+\]
+La composante normale de l'accélération est donc une conséquence de la variation de la direction du vecteur-vitesse et a, en revanche, a une forme complètement différente : 
+\[
+    a_n(t) &= \dfrac{v^2(t)}{R} = \omega^2R \quad \text{où} \quad 
+    \begin{cases}
+    R \To \text{rayon du cercle en } (m) \\
+    v \To \text{vitesse } (\mps) \\
+    \omega \To \text{vitesse angulaire en } (\rps) 
+    \end{cases}
+\]
+Avec l'expression vectorielle : $ \vec{a}_n(t) &= \dfrac{v^2(t)}{R}\cdot \vec{u}_n = \omega^2R\cdot \vec{u}_n $
+
+L'expression complète et générale d'un point en accélération est donc : 
+\begin{align*}
+    \va(t) &= \od{v(t)}{t}\cdot \vec{u}_t + \dfrac{v^2(t)}{R}\cdot \vec{u}_n = \dot{v}(t)\cdot \vec{u}_t + \dfrac{v^2(t)}{R}\cdot \vec{u}_n \\
+    \va(t) &= \od[2]{s(t)}{t}\cdot \vec{u}_t + \omega^2R\cdot \vec{u}_n = \Ddot{s}(t)\cdot \vec{u}_t + \omega^2R\cdot \vec{u}_n 
+\end{align*}
+
+\begin{exo}
+Calculer la norme du vecteur accélération d’une bille, assimilée à un point matériel, accrochée en O à un fil de longueur $L = 10\; cm$ , effectuant dix tours par seconde autour de $O$.  
+\vspace{2cm}
+\end{exo}
+
+\begin{exo}
+Montrer graphiquement que, dans un mouvement circulaire uniforme, l’accélération normale est toujours vers le centre de la trajectoire circulaire. 
+
+\vspace{4cm}
+\end{exo}
+
+\subsection{Représentation graphique du mouvement : $x(t), v(t), a(t)$}
+
+Voici un tableau récapitulatif de ces représentation du mouvement : 
+\vspace{1cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{imgs/p1/grap1.jpg}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{imgs/p1/grap2.jpg}
+\end{figure}
+
+%%%  ---------------- exos résolus ------------------
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/p1/xo1.jpg}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/p1/xo2.jpg}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/p1/xo3.jpg}
+\end{figure}
 
 
-
-
-
-%\section{}
 
 
 

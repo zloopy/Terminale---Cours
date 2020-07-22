@@ -12,6 +12,9 @@ urlcolor=cyan,
 \usepackage{lipsum}
 %to resume numbering in a list
 \usepackage{enumitem}
+%----- arrows 
+\usepackage{extarrows}
+
 %%%%%%pour ecrire en français avec les accents
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -25,9 +28,11 @@ urlcolor=cyan,
 \usepackage[export]{adjustbox}
 
 %%%%%%%pour faire des cadres
-\usepackage{framed}
 \usepackage{xcolor}
 \usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage{mdframed}
+
 %%%%%%%chemistry frmulae
 \usepackage{chemfig}
 \usepackage{chemformula}
@@ -49,19 +54,27 @@ urlcolor=cyan,
 % Position verticale des lettres dans la ligne de tableau.
 \usepackage{array}
 
-% MATH -----------------------------------------------------------
+% physics -----------------------------------------------------------
 \newcommand{\To}{\longrightarrow}
 \newcommand{\gpl}{\; g\cdot L^{-1}}
 \newcommand{\gpmol}{\; g\cdot mol^{-1}}
 \newcommand{\mpl}{\; mol\cdot L^{-1}}
 \newcommand{\mps}{\; m\cdot s^{-1}}
+\newcommand{\rps}{\; rad\cdot s^{-1}}
 \newcommand{\kph}{\; km\cdot h^{-1}}
 \newcommand{\mpss}{\; m\cdot s^{-2}}
+\newcommand{\Dt}{\Delta t}
+\newcommand{\vv}{\vec{v}}
+\newcommand{\va}{\vec{a}}
+\newcommand{\vp}{\vec{p}}
+\newcommand{\vf}{\vec{F}}
+\newcommand*{\Vf}[1]{\overrightarrow{F_\ensuremath{{#1}}}}
 \newcommand{\es}[1]{\cdot10^{#1}}
 \newcommand{\eng}[1]{\textcolor{purple}{(= #1})}
 \usepackage{harpoon}
 \newcommand*{\vect}[1]{\overrightharp{\ensuremath{#1}}}
 \newcommand*{\Vect}[1]{\overrightarrow{\ensuremath{#1}}}
+\newcommand{\pfd}[1]{\sum \vec{F}_{ext_{#1}} &= \od{\vp_{#1}}{t} = m\cdot\va_{#1}}
 
 % Chimie ---------------------------------
 \newcommand{\oxo}{\ce{H3O+}_{(aq)}}
@@ -70,18 +83,22 @@ urlcolor=cyan,
 \newcommand{\AH}{\ce{AH}_{(aq)}}
 \newcommand{\A}{\ce{A-}_{(aq)}}
 
+
 % Environnements ------------------------
 \newcounter{exo}
 \newenvironment{exo}[1][]
 {\refstepcounter{exo} \begin{shaded}\noindent $\triangleright \quad$\textbf{Exercice~\theexo. #1} } { \end{shaded}}
 \newenvironment{eg}
-{\begin{shaded} \textbf{Exemples:} } { \end{shaded}}
+{\begin{shaded} \textbf{Exemple:} } { \end{shaded}}
 
 \newenvironment{defn}[1]
 {\begin{leftbar}\noindent \textbf{Définition :\textit{ \quad #1}} } { \end{leftbar}}
 
+%\newenvironment{rmrq}
+%{\begin{shaded} \textbf{Remarque.\quad } \itshape } { \end{shaded}}
 \newenvironment{rmrq}
-{\begin{shaded} \textbf{Remarque.\quad } \itshape } { \end{shaded}}
+{\begin{mdframed}[backgroundcolor=blue!10, linewidth=0pt] \textbf{Remarque.\quad } \itshape } { \end{mdframed}}
+
 \newenvironment{python}
 {\begin{shaded} \textbf{A faire en PYTHON}\\ \itshape } { \end{shaded}}
 
