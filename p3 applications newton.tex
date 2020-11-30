@@ -14,7 +14,7 @@
 \lfoot{\textcopyright\; S Zayyani}
 \renewcommand{\footrulewidth}{0.1pt}% default is 0pt
 
-\title{\large Physique - Chapitre 3 \\ \LARGE Applications de la mécanique newtonienne :  \\ \large Les champs uniformes \& La mécanique céleste}
+\title{\large Physique - Chapitre 3 \\ \LARGE Applications de la mécanique newtonienne :  \\ \large Les champ uniformes \& La mécanique céleste}
 \date{}
 \author{}
 
@@ -38,36 +38,37 @@ calcul d'une dérivée ; principe d'inertie ; vecteurs ; trigonométrie ; décom
 
 \section{Une méthode générale de résolution de problème}
 
-Jusqu’ici nous avons retracé, plus ou moins, les premières étapes du programme de recherche de Newton, d’il y a plus de quatre siècles. On peut maintenant s’attaquer à un des problèmes principaux qui l’avaient motivé : la description du mouvement des objets dans l’univers. 
+Jusqu’ici nous avons retracé, plus ou moins, les premières étapes du programme de recherche de Newton, d’il y a plus de quatre siècles. On peut maintenant s’attaquer à un des problèmes principaux qui l’avait motivé : la description du mouvement des objets dans l’univers. 
 
-Pour cela, il faut une approche méthodologique à la résolution des problèmes de mécaniques que l'on pourra appliquer à une grande diversité de situations, soulignant que les principes derrières BEAUCOUP de phénomènes sont les mêmes, malgré les apparence qui peuvent nous tromper. 
-\newpage
+Pour cela, il faut une approche méthodologique à la résolution des problèmes de mécanique que l'on pourra appliquer à une grande diversité de situations, soulignant que les principes derrière \textit{beaucoup} de phénomènes sont les mêmes, malgré les apparence qui peuvent nous tromper. 
+
 
 \subsection{La méthode}
 
-Nous allons découper la méthode de résolution de problèmes en plusieurs étapes, afin de montrer à quel point cette approche est systématique. Voilà donc les étapes que nous allons suivre, pour chaque problème, indépendemment de la situation étudiée : 
+Voilà donc les étapes que nous allons suivre, pour chaque problème, indépendemment des apparences dans la description de la situation étudiée : 
+\newpage
 
 \begin{mdframed}[backgroundcolor=blue!5]
 
 \begin{enumerate}
-    \item \textbf{Définir le système étudié : } \\
-    Ceci se fait exactement comme nous l'avons déjà fait dans le cas des problèmes de conservation de quantité de mouvement. Le but ici est de pouvoir déterminer où se situé "l'extérieur" du système. 
-    \item \textbf{Choisir le référentiel :} \\
-    Pour nous en terminale, ce serait toujours un référentiel galiléen, c'est à dire un référentiel qui est en mouvement rectiligne uniforme. 
-    \item \textbf{Choisir le repère : }\\
-    Le choix du repère est essentiel pour un calcul correct. Il s'agit de choisir un repère, par exemple, cartésien, mais aussi du choix des signes pour les axes; par exemple de définir le sens gauche à droite comme positif, ou négatif.   
+    \item \textbf{Définir le système étudié. } \\
+    Ceci se fait exactement comme nous l'avons déjà vu dans le cas des problèmes de conservation de quantité de mouvement. Le but ici est de pouvoir déterminer où se situe "l'extérieur" du système, afin de pouvoir répertorier les interactions entre ce dernier et le système. 
+    \item \textbf{Choisir le référentiel.} \\
+    Pour nous, en terminale, ce serait toujours un référentiel galiléen, c'est-à-dire un référentiel qui est en mouvement rectiligne uniforme. 
+    \item \textbf{Choisir le repère. }\\
+    Le choix du repère est essentiel pour un calcul facile, et correct. Il s'agit de choisir un repère, par exemple, cartésien, mais aussi du choix de l'orientation des axes; par exemple, de définir le sens gauche à droite comme positif, ou négatif.   
     \item \textbf{Faire un diagramme de bilan des forces (BDF)\eng{Free-body diagram (FBD)} : }\\
-    Trouver le bon BDF est l'élément clef de la résolution du problème. L'objectif ici n'est pas un diagramme à la bonne échelle, mais plutôt l'identification des bonnes forces (extérieures au système choisi dans la première étape), et leur orientation par rapport au système d'étude. 
-    \item \textbf{Décomposer le problème selon les axes du repère : } \\
-    Un des points très fort de la mécanique classique est la possibilité de décomposer tout problème multidimensionnels, un plusieurs problèmes unidimensionnel, dont la résolution est beaucoup plus facile. Par exemple un problème en deux dimensions, dans un repère cartésien, peut être traité comme deux problèmes indépendants, selon $x$ et puis selon $y$. 
-    \item \textbf{Appliquer le principe fondamental de la dynamique, selon chaque chaque axes. }\\
-    La deuxième loi de Newton, le PFD, est l'outil principale qui nous permet d'établir un lien entre les forces agissant sur un système, et l'accélération qui en résulte; d'où l'importance d'un bon BDF. En appliquant le PFD, nous obtenons une fonction pour l'accélération du système (qui \textit{ne dépend que des forces} agissant sur le système). 
-    \item \textbf{Intégrer l'accélération afin d'obtenir la fonction de la vitesse}\\
-    La vitesse est la dérivée première de l'accélération (c.f. ch. 1 = cinématique du point). Une fois la fonction accélération obtenue, il suffit de trouver sa primitive qui sera la fonction vitesse. Ce processus s'appelle l'intégration. Afin de trouver une solution unique pour la fonction vitesse, par intégration, il nous faut les conditions initiales du système, notamment la vitesse initiale. 
+    Trouver le bon BDF est un des éléments clefs de la résolution du problème. L'objectif ici n'est pas un diagramme à la bonne échelle, mais plutôt l'identification des bonnes forces (extérieures au système choisi dans la première étape), et leur orientation par rapport au système d'étude. 
+    \item \textbf{Décomposer le problème selon les axes/dimensions du repère : } \\
+    Un des points très forts de la mécanique classique est la possibilité de décomposer tout problèmes multidimensionnels, en plusieurs problèmes unidimensionnels, dont la résolution est beaucoup plus facile. Par exemple, un problème en deux dimensions, dans un repère cartésien, peut être traité comme deux problèmes indépendants, selon $x$ et puis selon $y$. Les forces et les mouvements vont donc être décomposés selon ces axes. 
+    \item \textbf{Appliquer le principe fondamental de la dynamique, selon chaque chaque axe. }\\
+    La deuxième loi de Newton, le PFD, est l'outil principal qui nous permet d'établir un lien entre les forces agissant sur un système, et l'accélération qui en résulte; d'où l'importance d'un bon BDF. En appliquant le PFD, nous obtenons une fonction pour l'accélération du système (qui \textit{ne dépend que des forces} agissant sur le système). 
+    \item \textbf{Intégrer la fonction l'accélération afin d'obtenir la fonction de la vitesse}\\
+    La vitesse est la dérivée première de l'accélération (c.f. Ch.1 = cinématique du point). Une fois la fonction accélération obtenue, il suffit de trouver sa \textit{primitive} qui sera la fonction vitesse. Ce processus s'appelle l'intégration. Afin de trouver une solution unique pour la fonction vitesse, par intégration, il nous faut les conditions initiales du système, c'est-à-dire la vitesse initiale. 
     \item \textbf{Intégrer la fonction vitesse afin de d'obtenir la fonction position.}\\
-    Comme l'étape précédente, la fonction position est la primitive de la fonction vitesse. En intégrant vitesse nous obtenons alors la fonction position. En utilisant les conditions initiales (position initiale), on obtient une fonction unique pour la position. 
-    \item \textbf{Obtention des équation horaires du mouvement. }\\
-    En appliquant les deux étapes d'intégration, dans chaque dimension, nous obtenons une fonction position pour chaque coordonnée. L'ensemble de ces fonctions s'appellent les équations horaires du mouvement (ou les équations paramétriques, car tout est décrit en termes d'un paramètre, ici le temps). 
+    Comme l'étape précédente, la fonction position est la primitive de la fonction vitesse. En intégrant donc la vitesse, nous obtenons alors la fonction position. En utilisant les conditions initiales (position initiale), on obtient une fonction unique pour la position. 
+    \item \textbf{Obtention des équations horaires du mouvement. }\\
+    En appliquant les deux étapes d'intégration, dans chaque dimension, nous obtenons une fonction position pour chaque coordonnée. L'ensemble de ces fonctions s'appelle les équations horaires du mouvement (ou les équations paramétriques, car tout est décrit en terme d'un seul paramètre, ici le temps).
 \end{enumerate}
 \end{mdframed}
 
@@ -76,16 +77,17 @@ Avant donc de s'attaquer aux premiers exemples, faisons quelques rappels rapides
     \item La force gravitationnelle est donnée par l'expression $\Vec{F_g} = G\dfrac{m_Am_B}{r_{AB}^2}\cdot \Vect{u_{AB}}$
     \item Dans le cas de la Terre  
     \[\Vec{F_g} = -\left(G\dfrac{m_T}{R_{T}^2}\right)m\cdot\Vect{u_{z}} \quad \Leftrightarrow \quad \Vec{F_g} = m\Vec{g} \]
-    où $\Vec{g} = -G\dfrac{m_T}{R_{T}^2}\Vect{u_{z}}$ est le champs de pesanteur (un champ vectoriel), et $m_T$ et $R_T$ sont la masse et le rayon de la Terre, respectivement. 
+    où $\Vec{g} = -G\dfrac{m_T}{R_{T}^2}\Vect{u_{z}}$ est le champ de pesanteur (un champ vectoriel), et $m_T$ et $R_T$ sont la masse et le rayon de la Terre, respectivement. 
     \item Pour être encore plus précis : $\Vec{g} = -G\dfrac{m_T}{(R_{T} + z)^2}\cdot \Vect{u_{z}}$  où $z$ est l’altitude d’un objet par rapport à la surface de la Terre. 
-    \item 	Souvent, au voisinage de la surface de la Terre, on considère $\Vec{g}$  comme un champ \textit{localement uniforme} (car les variations du champ de pesanteur dues aux variations de quelques centaines de mètres d’altitude sont négligeables) ; c’est-à-dire : $\Vec{g} = -g\cdot\Vect{u_{z}}$
+    \item 	Souvent, dans le voisinage de la surface de la Terre, on considère $\Vec{g}$  comme un champ \textit{localement uniforme} (car les variations du champ de pesanteur dues aux variations de quelques centaines de mètres d’altitude sont négligeables) ; c’est-à-dire : $\Vec{g} = -g\cdot\Vect{u_{z}}$
     \item Un objet en chute libre ne subit \textit{que} son poids. 
     \item Le repère adopté – normalement - pour l’étude des objets en mouvement dans un champ de pesanteur est cartésien.
 \end{itemize}
 
 \subsection{Un cas classique : Mouvement projectile}
-Notre but dans cette partie est d'étude le mouvement d'un objet dans un champs gravitationnel uniforme (e.g. en voisinage de la surface de la Terre) en appliquant le PFD, et la méthode détaillée dans la partie précédente. 
+Notre but dans cette partie est d'étude le mouvement d'un objet dans un champ gravitationnel uniforme (e.g. en voisinage de la surface de la Terre) en appliquant le PFD, et la méthode détaillée dans la partie précédente. 
 
+\subsubsection{Les équations horaires}
 Considérons alors le cas d’un objet de masse $m$ en chute, depuis une hauteur $h$, avec des forces résistantes négligeables. 
 
 \begin{enumerate}
@@ -95,7 +97,7 @@ Considérons alors le cas d’un objet de masse $m$ en chute, depuis une hauteur
     Nous sommes dans le référentiel terrestre, et étant donnée la courte durée de l'événement, et la courte distance parcourue, il est supposé galiléen. 
     \item \textbf{Choisir le repère : }\\
     Le repère le plus naturel pour un mouvement pareil, est un repère cartésien. En plus, le mouvement est purement vertical, et donc, comme nous verrons, il n'y a qu'une seule dimension à considérer. 
-    Nous allons donc prendre le sens vers le haut comme positif (c'est un choix arbitraire, on aurait pu choisir le sens vers le bas comme positive, et cela n'aurais rien changé au niveau du mouvement, bien sur; la différence aurait été dans l'interprétation des signes à la fin du calcul.
+    Nous allons donc prendre le sens vers le haut comme positif (c'est un choix arbitraire, on aurait pu choisir le sens vers le bas comme positif, et cela n'aurait rien changé au niveau du mouvement, bien sur, la différence aurait été dans l'interprétation des signes à la fin du calcul.
     \item \textbf{Faire un diagramme de bilan des forces (BDF) : }\\
     Il s'agit d'un cas très simple, car en disant que toutes forces de résistance sont négligeables, la seule force restante est le poids de la masse $\Vect{F_g}$
     \begin{figure}[H]
@@ -106,7 +108,7 @@ Considérons alors le cas d’un objet de masse $m$ en chute, depuis une hauteur
     \item \textbf{Décomposer le problème selon les axes du repère : } \\
     Le mouvement dans ce cas est clairement un mouvement uni-dimensionnel, dans la direction verticale, selon $y$. Il n'y a donc que cette direction à traiter, dans l'étape suivante. 
 
-    \item \textbf{Appliquer le principe fondamental de la dynamique, selon chaque chaque axes. }\\
+    \item \textbf{Appliquer le principe fondamental de la dynamique, selon chaque axe. }\\
     Enfin, on peut s'amuser! 
     D'après le PFD : 
     \[ \pfd{y} \]
@@ -116,9 +118,9 @@ Considérons alors le cas d’un objet de masse $m$ en chute, depuis une hauteur
         m\va_y &= m\Vec{g} \\
         \va_y &= \Vec{g} 
     \end{align*}
-    Cela veut dire que le corps accélère, et que l’accélération est due à l’intensité de pesanteur, mais aussi que c'est dans le même sens et direction que la pesanteur. Notez bien que $\Vect{g}$ a les mêmes unités que l'accélération, c'est pour cette raison que l'on parle souvent aussi de $g$ comme l'accélération due à la pesanteur. 
+    Cela veut dire que le corps accélère, et que l’accélération est due à l’intensité de pesanteur, mais aussi que c'est dans le même sens et direction que la pesanteur. Notez bien que $\Vect{g}$ a les mêmes unités que l'accélération, c'est pour cette raison que l'on parle souvent aussi de $g$ comme l'\textit{accélération due à la pesanteur}. 
     
-    Comprenons aussi le sens de l'équation vectorielle $\va_y = \Vect{g} $ qui en fait est trois équations en réalité. Car si l'on décomposait cette équation selon les trois dimensions nous aurions trois équations scalaires. Il faut donc lire $\Vect{g}$ comme 
+    Comprenons aussi le sens de l'équation vectorielle $\va_y = \Vec{g} $ qui en fait est trois équations. Car si l'on décomposait cette équation selon les trois dimensions nous aurions trois équations scalaires. Il faut donc lire $\Vec{g}$ comme 
     \begin{align*}
     \Vec{g} &= \begin{pmatrix} g_x\cdot\Vec{i} \\ g_y\cdot\Vec{j} \\ g_z\cdot\Vec{k} \end{pmatrix}  = \begin{pmatrix} 0\cdot\Vec{i} \\ 0\cdot\Vec{j} \\ -g\cdot\Vec{k} \end{pmatrix}  
     \end{align*}
@@ -136,7 +138,7 @@ Considérons alors le cas d’un objet de masse $m$ en chute, depuis une hauteur
     
 
     \item \textbf{Intégrer la fonction vitesse afin de d'obtenir la fonction position.}\\
-    Par un raisonnement analogue à l'étape suivante (la fonction position est la primitive de la fonction vitesse que l'on vient de déterminer), par intégration on peut obtenir les équations de la position. Comme avant, afin d'obtenir une solution unique il nous faut les conditions initiales, c'est à dire la position initiale $s(0) = (x_0, y_0, z_0)$
+    Par un raisonnement analogique (la fonction position est la primitive de la fonction vitesse que l'on vient de déterminer), par intégration on peut obtenir les équations de la position. Comme avant, afin d'obtenir une solution unique il nous faut les conditions initiales, c'est-à-dire la position initiale $s(0) = (x_0, y_0, z_0)$
     
         \[\begin{Bmatrix} v_x(t) = v_{x_0}\\ v_y(t)=v_{y_0}\\ v_z(t)=-gt + v_{z_0} \end{Bmatrix} \underrightarrow{\quad \text{Par Intégration}\quad }  \begin{Bmatrix} x(t) = v_{x_0}t+x_0\\ y(t)=v_{y_0}t+y_0\\ z(t)=-\dfrac{1}{2}gt^2 + v_{z_0}t + z_0 \end{Bmatrix}\]
         
@@ -146,11 +148,11 @@ Considérons alors le cas d’un objet de masse $m$ en chute, depuis une hauteur
     Elles donnent une description générale du mouvement d’un corps en chute libre. En choisissant des conditions initiales différentes (i.e. vitesse et position initiales différentes), nous pouvons déterminer les positions différentes aux instants différents. 
 \end{enumerate}
 
-\subsection{La trajectoire}
+\subsubsection{La trajectoire}
 
-Les équations horaires donnent l'ensemble des points occupés par le corps étudié au cours du temps, \textit{en fonction du temps}. Cet ensemble de positions dépend de la dynamique du mouvement (i.e. les forces, la loi de gravitation, etc) ET des conditions initiales : deux balles ayant exactement la même tout, dans un même champ gravitationnel, ne vont pas avoir la même trajectoire, si la position de départ n'est pas pareille; et de même si leur vitesses initiales sont différentes. 
+Les équations horaires donnent l'ensemble des points occupés par le corps étudié au cours du temps, \textit{en fonction du temps}. Cet ensemble de positions dépend de la dynamique du mouvement (i.e. les forces, la loi de gravitation, etc) ET des conditions initiales : deux balles identiques, dans un même champ gravitationnel, ne vont pas avoir la même trajectoire, si la position de départ n'est pas pareille; et de même si leur vitesse initiale est différente. 
 
-Dans un sens donc, tout objet en chute libre dans champs uniforme (comme la pesanteur terrestre) sont absolument identiques dans leurs mouvements, aux conditions initiales près. 
+Dans un sens donc, tous les objets en chute libre dans un champ uniforme (comme la pesanteur terrestre) sont absolument identiques dans leurs mouvements, aux conditions initiales près. 
 
 Nous pouvons montrer ces différents ensembles de position différemment, grâce à l'équation de la trajectoire; la différence avec les équations horaires étant que l'équation de la trajectoire n'est pas paramétrisée par le temps. Il s'agit d'une relation de la variation d'une des coordonnées en fonction des autres : c'est une représentation de la courbe statique de la trajectoire, et non la variation de chaque coordonnée dans le temps. 
 
@@ -166,42 +168,175 @@ Le mouvement ici est dans le plan vertical, généré par les vecteurs unitaires
 
 Pour cela, on se sert du paramètre $t$ présent dans les équations contenant $x(t)$ et $z(t)$, pour en faire des équivalences (simplifions le calcul ici en mettant l'origine à $s_0 = (0,0,0) $. 
 
-C'est à dire à partir de :\begin{cases} x(t) = v_{x_0}t \quad \Leftrightarrow\quad t=\dfrac{x}{v_{x_0}}\\ z(t)=-\dfrac{1}{2}gt^2 + v_{z_0}t \end{cases}  
+c'est-à-dire à partir de :\begin{cases} x(t) = v_{x_0}t \quad \Leftrightarrow\quad t=\dfrac{x}{v_{x_0}}\\ z(t)=-\dfrac{1}{2}gt^2 + v_{z_0}t \end{cases}  
 
 ce qui nous donne 
 \[ z = -\dfrac{1}{2}g\left(\dfrac{x}{v_{x_0}}\right)^2 + v_{z_0}\cdot\left(\dfrac{x}{v_{x_0}}\right) \quad \Leftrightarrow\quad z = -\left(\dfrac{g}{2\cdot v^2_{x_0}}\right)x^2 + \left(\dfrac{v_{z_0}}{v_{x_0}}\right)x\]
 
-Nous voyons clairement que l’équation $z=f(x)$ est de 2e ordre, et décrit donc une courbe parabolique. Ce qui correspond bien à la trajectoire d'un projectile dans un champs de pesanteur uniforme.
+Nous voyons clairement que l’équation $z=f(x)$ est de 2e ordre, et décrit donc une courbe parabolique. Ce qui correspond bien à la trajectoire d'un projectile dans un champ de pesanteur uniforme.
 
-Et si nous avions d'autres conditions initiales? La méthode reste inchangée : manipuler algébriquement nos équations horaires afin d'exprimer une des coordonnées en fonctions des autres. 
+Et si nous avions d'autres conditions initiales? La méthode reste inchangée : manipuler algébriquement nos équations horaires afin d'exprimer une des coordonnées en fonction des autres. 
 
 \subsection{Particule dans un champ électrostatique uniforme}
 
-Voici une autre application directe de la méthode détaillée ci-avant. La seule chose qui change est l'origine et la nature de la force agissant sur le corps. Dès l'application du PFD la force est la force exercée par le champs électrostatique, c'est à dire $F_k = q\cdot E$ où $E$ représente un champs électrostatique uniforme (comme vu en classe de première). Pour rappel, ici, $E$ est l'analogue du champs de pesanteur $g$, alors que la charge $q$ est l'analogue de la masse $m$. 
+Voici une autre application directe de la méthode détaillée ci-avant. La seule chose qui change est l'origine et la nature de la force agissant sur le corps. Dès l'application du PFD la force est la force exercée par le champ électrostatique, c'est-à-dire $F_k = q\cdot E$ où $E$ représente un champ électrostatique uniforme (comme vu en classe de première). Pour rappel, ici, $E$ est l'analogue du champ de pesanteur $g$, alors que la charge $q$ est l'analogue de la masse $m$. 
 
 La suite est exactement pareille. 
 
 \begin{exo}
-Trouver l'expression littérale d'une charge $q$ dans un champs électrostatique uniforme $E$, située initialement à $(0,0,0)$ et immobile. 
+Trouver l'expression littérale d'une charge $q$ dans un champ électrostatique uniforme $E$, située initialement à $(0,0,0)$ et immobile. 
 \vspace{4.5cm}
 \end{exo}
 
 \begin{exo}
-Trouver l'expression littérale d'une charge $q$ dans un champs électrostatique uniforme $E$, vertical vers le haut, et un champs de pesanteur uniforme $g$, située initialement à $(0,0,0)$ et immobile. 
+Trouver l'expression littérale d'une charge $q$ dans un champ électrostatique uniforme $E$, vertical vers le haut, et un champ de pesanteur uniforme $g$, située initialement à $(0,0,0)$ et immobile. 
 \vspace{4.5cm}
 \end{exo}
 
 \section{Mécanique céleste : Lois de Kepler }
 
-\subsection{$1ère$ loi : Loi des orbites}
+\begingroup
+\setlength{\columnsep}{15pt}%
+\setlength{\intextsep}{-10pt}%
+\begin{wraptable}{r}{0.3\linewidth}
+\begin{rmrq}
+\small{L’orbite de la Terre s’appelle l’écliptique. Le centre du soleil est situé dans le plan de l’écliptique. Les plans des orbites des autres planètes sont peu inclinés par rapport au plan de l’écliptique, sauf pour Mercure (7°) et Pluton (17°), qui, d’ailleurs ne compte plus parmi les planètes. }
+\end{rmrq}
+\end{wraptable}
+
+Un des premiers grands pas vers l’astronomie et la mécanique moderne a été fait par l’astronome allemand Johannes Kepler plus qu’un demi-siècle avant Newton. En travaillant avec les observations de l’astronome Danois Tycho Brahe (qui étaient à l’époque les plus précises jamais réalisées), il a pu non seulement vérifier l’hypothèse de l’héliocentricité du système solaire, proposée par Copernic 100 ans auparavant, mais aussi montrer que les orbites étaient elliptiques, et non pas circulaires (et tout ça avant la mécanique Newtonienne ! Il était très fort en effet). De plus, les résultats de Kepler marquent un des premiers pas vers une description mathématique des lois de nature. 
+
+Kepler a pu résumer ses découvertes astronomiques sous la forme de trois lois. 
+
+\endgroup
+Dans un référentiel héliocentrique :
+\begin{enumerate}
+    \item \textbf{1ère loi : }la trajectoire du centre de gravité d’une planète est une ellipse dont le centre de gravité du Soleil est l’un de ses foyers (le mouvement d’une planète décrit une ellipse dont l’un des foyers est le Soleil).
+    \item \textbf{2ème loi : }pendant une durée donnée Δt, l’aire ΔA balayée par le rayon joignant le centre du Soleil au centre de la planète est constante. Elle ne dépend pas de la position de la planète sur son orbite. 
+    \item \textbf{3ème loi : }Pour toute planète du système solaire, le carré de la période de révolution est proportionnel au cube de la demi-grand axe de l’ellipse. 
+\end{enumerate}
+
+\subsection{$1^{ère}$ loi : Loi des orbites}
+
+\begin{shaded}
+Dans un référentiel héliocentrique, les orbites des planètes sont des ellipses dont le centre du Soleil est l’un des foyers. 
+\end{shaded}
+
+\begin{defn}{Ellipse}
+\begin{itemize}
+    \item En géométrie, une ellipse est une courbe plane fermée obtenue par l’intersection d’un cône ou d'un cylindre droit avec un plan, à condition que celui-ci coupe l'axe de rotation du cône ou du cylindre. On peut également la définir comme l’ensemble des points dont la somme des distances à deux points fixes, dits foyers, est constante. 
+    \item Elle est caractérisée par (c.f. Figure \ref{fig:ellipse} ci-après) :
+    \begin{itemize}
+        \item la longueur du grand rayon (ou demi-grand axe), généralement notée $a$ ;
+        \item la longueur du petit rayon (ou demi-petit axe), généralement notée $b$ ;
+        \item la distance séparant le centre de l'ellipse et un des foyers, généralement notée $c$ ;
+    \end{itemize}
+    \item Une ellipse est une courbe plane.  
+\end{itemize}
+\end{defn}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.65\linewidth]{imgs/p3/ellipse.png}
+    \caption{Une Ellipse}
+    \label{fig:ellipse}
+\end{figure}
 
 
-\subsection{$2ème$ loi : Loi des aires}
+Il est important de noter qu’un cercle est simplement une ellipse où les deux foyers sont confondus. Autrement dit, un cercle est une ellipse dont les deux demi-axes sont de même longueur, égale au rayon du cercle. 
+
+La 1ère loi de Kepler, comme les deux autres, est une loi empirique : il l’a déduite en observant le trajet des planètes dans le ciel. 
 
 
+\subsection{$2^{ème}$ loi : Loi des aires}
 
-\subsection{$3ème$ loi : Loi des périodes}
+\begin{shaded}
+Pendant une durée donnée $\Delta t$, l’aire $A$ balayée par le rayon joignant le centre du Soleil au centre de la planète est constante. Elle ne dépend pas de la position de la planète sur son orbite
+\end{shaded}
+
+Selon cette $2^{ème}$ loi, si $S$ est le Soleil et $M$ une position quelconque d'une planète, l'aire balayée par le segment $[SM]$ entre deux positions $C$ et $D$ est égale à l'aire balayée par ce segment entre deux positions $E$ et $F$ si la durée qui sépare les positions $C$ et $D$ est égale à la durée qui sépare les positions $E$ et $F$. 
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.95\linewidth]{imgs/p3/aires.jpg}  
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+ %%%%%%%%%%% % include first image
+  \includegraphics[width=.95\linewidth]{imgs/p3/ellipse2.jpg}
+\end{subfigure}
+\caption{La variation de la vitesse d'une planète lors de son orbite selon Kepler.}
+\end{figure} 
+
+La vitesse d'une planète devient donc plus grande lorsque la planète se rapproche du Soleil. Elle est maximale au voisinage du rayon le plus court (périhélie), et minimale au voisinage du rayon le plus grand (aphélie). 
+
+\subsection{$3^{ème}$ loi : Loi des périodes}
+\begin{shaded}
+Le carré de la période sidérale $P$ d'une planète (temps entre deux passages successifs devant une étoile lointaine) est directement proportionnel au cube du demi-grand axe a de la trajectoire elliptique de la planète.
+\[  T^2 \propto a^3  \]
+\end{shaded}
+
+Considérez une planète effectuant une orbite elliptique autour du Soleil. Sa révolution est périodique avec une période $T$. Selon la $3^{ème}$ loi de Kepler, cette période dépend du demi-grand axe de l’ellipse de son orbite : 
+\[  \dfrac{T^2}{a^3} = K \quad \text{où} \quad 
+\begin{cases}
+T \rightarrow \text{période de révolution }(s) \\
+a \rightarrow \text{longueur du demi-grand axe } (m) \\
+K \rightarrow \text{Constante de proportionnalité } \end{cases}
+\]
+La loi des périodes implique donc que le rapport $\frac{T^2}{a^3} $ est identique pour tout corps ``attrapé'' dans le champ gravitationnel d'une astre. Autrement dit, dans le cas de notre système solaire, pour une constante $K$ specifique (à déterminer) : 
+\[ \dfrac{T^2_{Terre}}{a^3_{Terre}} = \dfrac{T^2_{Mars}}{a^3_{Mars}} = \dfrac{T^2_{Jupiter}}{a^3_{Jupiter}} = \ldots = K
+\]
+
+On voudrait déterminer la valeur de constante de proportionnalité. Supposons qu’une planète de masse $m$ soit en orbite circulaire autour du soleil de masse $m_s$.  La trajectoire de son orbite est un cercle de rayon $R$. 
+
+La seule force non-négligeable agissant sur la planète et la force gravitationnelle du soleil sur celle-ci : 
+\[ F_g = G\frac{m\cdot m_s}{R^2}\Vect{u_n}  \]
+On se rappelle que $\Vect{u_n}$  est le vecteur unitaire normal, qui est toujours dirigé d’un point du cercle vers son centre (c.f. les composantes normales et tangentielles du repère de Frénet).  
+
+Si l’on considère que le mouvement est circulaire et uniforme, l’accélération est alors seulement centripète, car la composante tangentielle reste constante. 
+
+Appliquons alors le PFD 
+\[ \pfd{}  \quad \Leftrightarrow \quad \va = \frac{\sum \vec{F}_{ext}}{m} \]
+On suppose que le mouvement est circulaire et uniforme (dans l'intérêt de simplicité) et donc $\va = \va_n = \frac{v^2}{R}\Vec{u_n}$
+
+Le PFD devient alors : 
+\begin{align*}
+\m\cdot \frac{v^2}{R}\;\Vect{u_n} &=  G\frac{m\cdot m_s}{R^2}\;\Vect{u_n}  \\
+\frac{v^2}{R} &=  G\frac{m_s}{R^2} \\
+v &= \sqrt{G\frac{m_s}{R}}
+\end{align*}
+
+et donc la période de la révolution est :
+\[ T = \frac{d}{v} = \dfrac{2\pi R}{\sqrt{G\frac{m_s}{R^2}}} = 2\pi\sqrt{G\frac{R^3}{m_s}}        \]
+
+et avec un peu de gymnastique algébrique (que vous devez faire vous-même)
+\[ \dfrac{T^2}{R^3} = \dfrac{4\pi^2}{G\cdot m_s} \quad \text{où} \quad 
+\begin{cases}
+T \rightarrow \text{période de l'orbite }(s) \\
+R \rightarrow \text{rayon de l'orbite } (m) \\
+m_s \rightarrow \text{masse de l'ensemble de deux objets (soleil) } (m) \\
+G \rightarrow \text{Constante universelle gravitationnelle de Newton } (SI)
+\end{cases}\]
+
+Grâce à la mécanique newtonienne nous avons \textit{re}-trouvé la troisième loi de Kepler ET nous avons maintenant une expression qui donne les origines de la constante de Kepler (et qui confirme qu'en effet cette constante dépend de la masse du corps qui génère le champ gravitationnel dans lequel les autres corps sont en orbite) : 
+\[ K =  \dfrac{4\pi^2}{G\cdot m_s}       \]
+La 3e loi de Kepler pour le mouvement orbital \textit{elliptique} a la même expression que pour un mouvement circulaire, sauf que le rayon r est remplacé par $a$, le demi-grand axe:
+\[ \dfrac{T^2}{a^3} = \dfrac{4\pi^2}{G\cdot m_s}\]
+Même si Kepler les a énoncées pour le mouvement des planètes autour du Soleil, les lois de Kepler peuvent être généralisées à tout satellite ou planète en orbite autour d’un corps/astre de masse $m_s$.  
 
 \subsection{Application : Satellites géostationnaires }
+
+Un satellite géostationnaire est un satellite artificiel qui se trouve sur une orbite géostationnaire. L’orbite géostationnaire \eng{geostationary orbit} est un cas particulier de l’orbite \textbf{géosynchrone}. Elle est parfois appelée orbite de Clarke ou ceinture de Clarke, du nom de l’auteur britannique de science-fiction Arthur C. Clarke qui, le premier, eut l’idée d’un réseau de satellites utilisant cette orbite (voyez-vous l’importance de la bonne science-fiction ?). 
+
+Sur cette orbite, le satellite se déplace de \textbf{manière exactement synchrone avec la planète et reste constamment au-dessus du même point de la surface}. Cette caractéristique est très utile pour les télécommunications (satellite de télécommunications) et pour certaines applications dans le domaine de l’observation de la planète Terre.
+
+\begin{exo}
+Déterminer à quel \textit{altitude} est située l'orbite géostationnaire, étant donné que la masse de la Terre est $m_T = 5,976\es{24}\; kg$ et $R=6385\; km$.
+\vspace{4cm}
+\end{exo}
+
 
 \end{document}
