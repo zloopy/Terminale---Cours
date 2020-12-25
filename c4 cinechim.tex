@@ -29,13 +29,14 @@
 
 \begin{document}
 \maketitle
-\vspace{-1cm}
+\vspace{-2cm}
 \begin{tcolorbox}[title=Notions de la classe de première à rappeler]
-calcul d'un logarithme ; solvatation d'un proton libre dans l'eau ; Concentration molaire
+calcul d'un logarithme ; solvatation d'un proton libre dans l'eau ; Concentration molaire ; dérivée d'une fonction ; équation différentielle de premier degré 
 %\tcblower
 \end{tcolorbox}
+\vspace{1cm}
 \tableofcontents
-
+\vspace{1cm}
 \section{Étude qualitative}
 
 Nous entamons ici un nouveau domaine de la chimie, l'étude de la vitesse et de la dynamique des réactions. Jusqu'alors nous avons supposé que toute réaction étaient instantanée. Nous savons que ceci n'est pas le cas, car nous connaissons des réactions vives (comme la combustion) mais aussi des réaction qui peuvent avoir lieu pendant une période très longue (comme la corrosion). Commençons donc par quelques définitions. 
@@ -50,20 +51,24 @@ Nous entamons ici un nouveau domaine de la chimie, l'étude de la vitesse et de 
     \item La cinétique chimique est l’étude de l’évolution temporelle des transformations chimiques. 
 \end{itemize}
 \end{defn}
+\begin{eg}
+
+Une \textbf{combustion} est une réaction rapide (considérée même comme instantanée), tandis que la \textbf{formation de la rouille} (qui est une réaction aussi avec le dixoygène) est une réaction lente. 
+\end{eg}
 
 \subsection{Facteurs cinétiques}
 
 \begin{defn}{Facteurs cinétiques}
 \begin{itemize}
-    \item Un facteur cinétique est un paramètre qui influence sur la vitesse d’une réaction, et donc sur la durée d’une réaction.
-    \item Un facteur cinétique pourrait être un paramètre physique ou chimique.
+    \item Un facteur cinétique est un \textbf{paramètre qui influence} la vitesse d’une réaction, et donc la durée d’une réaction.
+    \item Un facteur cinétique pourrait être un paramètre \textbf{physique} ou \textbf{chimique}.
 \end{itemize}
 \end{defn}
 	
 Les facteurs cinétiques principaux sont :
 \begin{itemize}
-        \item \textbf{La température du système : }l’évolution d’un système chimique est d’autant plus rapide que sa température est élevée. Ceci est du au fait que, aux températures plus élevées, le nombre de chocs entre les molécules augmente, et de plus  les molécules s’entrechoquent plus « efficacement ».
-        \item \textbf{La concentration des réactifs : }l’évolution d’un système chimique est d’autant plus rapide que les concentrations des réactifs sont élevées. Ceci s’explique aussi de la même manière que pour la température : quand le nombre d’entités chimiques contenues dans un volume donné augmente, la fréquence des chocs augmente et la probabilité d’un choc efficace également.  (A-ha ! Nous comprenons alors pourquoi la vitesse de la réaction diminue au cours de la réaction !)
+        \item \textbf{La température du système : }l’évolution d’un système chimique est d’autant plus rapide que sa température est élevée. Ceci est du au fait que, aux températures plus élevées, le nombre de chocs, et surtout l'énergie des chocs entre les molécules augmente.
+        \item \textbf{La concentration des réactifs : }l’évolution d’un système chimique est d’autant plus rapide que les concentrations des réactifs sont élevées. En effet, quand le nombre d’entités chimiques contenues dans un volume donné augmente, la fréquence des chocs augmente et la probabilité d’un choc efficace également.  (A-ha ! Et cela explique aussi pourquoi la vitesse de la réaction diminue au cours de la réaction !)
         \item \textbf{L’état physique de la matière :} l’état physique influence aussi le contact entre les molécules. Les réactifs ont plus de surface de contact à l’état liquide, par exemple, qu’à l’état solide, et donc plus de possibilité de chocs efficaces.
         \item \textbf{La présence d’un catalyseur }
         \item \textbf{Le choix du solvant : }Le solvant (comme le catalyseur) n’apparait pas dans le bilans des matières d’une réaction chimique, et pourtant son influence sur la vitesse d’une réaction pourrait être très importante. Un solvant qui solubilise bien des espèces chimiques, favorise leur contact, et rend donc la réaction plus rapide. 
@@ -177,7 +182,7 @@ Nous allons commencer par définir une grandeur importante qui va nous permettre
     \item La vitesse d'apparition ou de formation d'un produit $P$, est donnée par : 
     \[ v_{formation}(\ce{P}) = \od{\left[\ce{P}\right]}{t}       \]
     \item La vitesse de disparition d'un réactif $R$, est donnée par : 
-    \[ v_{formation}(\ce{R}) = - \od{\left[\ce{R}\right]}{t}       \]
+    \[ v_{disparition}(\ce{R}) = - \od{\left[\ce{R}\right]}{t}       \]
 \end{itemize}
 \end{defn}
 
