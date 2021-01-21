@@ -12,13 +12,13 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{SciPhy : Terminale spé}
-\rhead{Ch. 3 : Acides \& Bases}
+\rhead{$\chi $ - 5 : Chimie organique}
 \chead{2020-28}
 \rfoot{Page \thepage}
 \lfoot{\textcopyright\; S Zayyani}
 \renewcommand{\footrulewidth}{0.1pt}% default is 0pt
 
-\title{\large Chimie - Chapitre 5 \\ \LARGE  La chimie organique}
+\title{\large Chimie - Chapitre 5 \\ \LARGE  La synthèse organique}
 \date{}
 \author{}
 
@@ -29,19 +29,17 @@
 \setlength{\intextsep}{6pt}%
 \setlength{\columnsep}{3pt}%
 
-
-
 \begin{document}
 \vspace{-1cm}
 \maketitle
 \vspace{-1cm}
 \begin{tcolorbox}[title=Notions de la classe de première à rappeler]
-groupes caractéristiques ; 
+groupes caractéristiques ; réactions chimiques ; isomérie ; 
 %\tcblower
 \end{tcolorbox}
 \tableofcontents
 
-\section{Les molécules organique}
+\section{Les molécules organiques}
 Nous avons rencontré quelques molécules organiques depuis la classe de seconde. Quelques rappels donc, pour commencer : 
 
 \begin{defn}{}
@@ -61,7 +59,7 @@ L'organisation internationale chargée du développement des règles à adopter 
 
 Selon les règles de I’IUPAC, il existe un système pour nommer des composés chimiques afin de pouvoir en déduire leurs formules développées. Nous allons apprendre une partie de ces règles. 
 
-La structure la plus basique d'une molécule organique est la chaîne carbonée qui forme le squelette de l'hydrocarbure. Commençons donc, par les préfixes des molécules, qui dépendent du nombre de carbones dans la chaîne carbonée principale (la chaîne la plus longue). 
+La structure la plus fondamental d'une molécule organique est la chaîne carbonée qui forme le \textbf{squelette} de l'hydrocarbure. Commençons donc par les préfixes des molécules, qui dépendent du nombre de carbones dans la chaîne carbonée principale (la chaîne la plus longue). 
 
 \begin{figure}[h]
     \centering
@@ -71,7 +69,7 @@ La structure la plus basique d'une molécule organique est la chaîne carbonée 
 \end{figure}
 
 \subsubsection{Alcanes}
-Les chaîne carbonés ne contenant que des liaisons simples entre les carbones, s'appellent des alcanes. Les alcanes sont des hydrocarbures saturés : ils ne contiennent que des atomes de carbone et d’hydrogène liés par des liaisons simples.  Leur formule générale est : $\ce{C_nH_{2n+2}}$.
+Les chaîne carbonées ne contenant que des liaisons simples entre les carbones, s'appellent des \textbf{alcanes}\eng{alkane}. Les alcanes sont des hydrocarbures saturés : ils ne contiennent que des atomes de carbone et d’hydrogène liés par des liaisons simples.  Leur formule générale est : $\ce{C_nH_{2n+2}}$.
 
 % Please add the following required packages to your document preamble:
 % 
@@ -101,7 +99,7 @@ Les chaîne carbonés ne contenant que des liaisons simples entre les carbones, 
 
 \subsubsection{Alcènes}
 
-Les alcènes sont des hydrocarbures non-saturés : ils ne contiennent que des atomes de carbone et d’hydrogène liés par des liaisons simples et au moins une liaison double entre deux carbones ( $\ce{C=C}$ ) de la chaîne principale.   Leur formule générale est $\ce{C_nH_{2n}}$  (quand ils comportent une seule liaison double).
+Les alcènes\eng{alkene} sont des hydrocarbures non-saturés : ils ne contiennent que des atomes de carbone et d’hydrogène liés par des liaisons simples et une liaison double entre deux carbones ($\ce{C=C}$) de la chaîne principale.   Leur formule générale est $\ce{C_nH_{2n}}$  (quand ils comportent une seule liaison double).
 	
 La nomenclature des alcènes est un peu plus complexe (par rapport aux alcanes), car il faut préciser le placement de la liaison double sur la chaîne principale. Il faut donc utiliser le même nom que celui de l'alcane portant le même nombre d'atomes de carbone, en utilisant la terminaison « -ène » à la place de « -ane », et en intercalant l'indice de position de la double liaison (afin de situer la double liaison, numéroter la chaîne principale de façon à ce que le numéro de l'atome C portant la double liaison soit le plus petit possible) dans le mot, avant le suffixe, et encadré par deux tirets. 
 
@@ -122,8 +120,8 @@ La nomenclature des alcènes est un peu plus complexe (par rapport aux alcanes),
         -[:210]\mcfbelow{C}{H}% 3
         =[:150]\mcfabove{C}{H}% 4
     -[:210,,,2]H_3C% 5
-} s'appelle Pent-2-ène (car on cherche à numéroter dans le sens qui nous permettrait de minimiser les nombres.
-    \item \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(-[2]H)=C(-[2]H)-C(-[2]H)(-[6]H)-H} est donc la formule développée de Pent-2-ène, avec une formule toplogique \chemfig{
+} s'appelle Pent-2-ène (car on cherche à numéroter dans le sens qui nous permettrait de minimiser numéro du carbone avec la liaison double).
+    \item \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(-[2]H)=C(-[2]H)-C(-[2]H)(-[6]H)-H} est donc la formule développée de Pent-2-ène, avec une formule topologique \chemfig{
            % 1
      -[:30]% 2
     -[:330]% 3
@@ -134,18 +132,14 @@ La nomenclature des alcènes est un peu plus complexe (par rapport aux alcanes),
 \end{eg}
 
 \subsubsection{Alcynes}
-Il existe une troisième famille d’hydrocarbures, les alcynes, qui sont des chaînes carbonées comportant au moins une liaison triple entre deux carbones ( $\ce{C#C}$ ). Les règles de nomenclature sont comme celles des alcènes sauf pour la terminaison qui devient –yne (comme éthyne, butyne, etc.).  La formule générale d’un alcyne comportant une seule liaison triple est $\ce{C_nH_{2n-2}}$. 
-
-(Les alcynes ne sont pas au programme de terminale pour le moment). 
-\vspace{1cm}
-
-Voici un tableau pour récapituler les différentes types de structure que l'on voit dans des hydrocarbures : 
-
-\begin{figure}[h]
+Il existe une troisième famille d’hydrocarbures, les alcynes\eng{alkyne}, qui sont des chaînes carbonées comportant au moins une liaison triple entre deux carbones ( $\ce{C#C}$ ). Les règles de nomenclature sont comme celles des alcènes sauf pour la terminaison qui devient –yne (comme éthyne, butyne, etc.).  La formule générale d’un alcyne comportant une seule liaison triple est $\ce{C_nH_{2n-2}}$. (Les alcynes ne sont pas au programme de terminale pour le moment). 
+\vspace{1.5cm}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{imgs/c5/structures.jpg}
 \end{figure}
-\subsubsection{Molécules cycliques \& aromatiques}
+
+\subsubsection{Molécules cycliques}
 Lorsque la chaîne est fermée (même partiellement), l’alcane ou l’alcène est dit «cyclique», et le nom est précédé du préfixe cyclo-. 
 
 \begin{eg}
@@ -161,7 +155,7 @@ Lorsque la chaîne est fermée (même partiellement), l’alcane ou l’alcène 
                   (
          -[:120,,1]\phantom{C}% -> 1
                   )
-}\quad \quad en toplogique
+}\quad \quad en topologique
 \chemfig{
            % 1
     -[:180]% 2
@@ -176,7 +170,7 @@ Lorsque la chaîne est fermée (même partiellement), l’alcane ou l’alcène 
 \vspace{1cm}
 
 \textbf{Cyclopentène : } en semi-développéeen
-\chemfig{\mcfabove{C}{\mcfright{H}{_2}}-[:180]\mcfabove{C}{\mcfright{H}{_2}}-[:252,,,2]HC=^[:324,,2]\mcfbelow{C}{H}-[:36,,,1]CH_2(-[:108,,1]\phantom{C})} \quad \quad en toplogique
+\chemfig{\mcfabove{C}{\mcfright{H}{_2}}-[:180]\mcfabove{C}{\mcfright{H}{_2}}-[:252,,,2]HC=^[:324,,2]\mcfbelow{C}{H}-[:36,,,1]CH_2(-[:108,,1]\phantom{C})} \quad \quad en topologique
 \chemfig{
             % 1
      -[:180]% 2
@@ -192,11 +186,15 @@ Lorsque la chaîne est fermée (même partiellement), l’alcane ou l’alcène 
 \end{eg}
 
 \begin{rmrq}
-An triple, il faut perdre deux hydrogènes. En commençant donc avec la formule d’un hydrocarbure saturé $(\ce{C_nH_{2n+2}})$ chaque fois que l’on rajoute une liaison entre deux carbones, il faut enlever deux hydrogènes. 
-
-Ceci est également le cas quand on convertit une chaîne ouverte en chaîne cyclique. Donc en regardant la formule brute d’un hydrocarbure nous pouvons déterminer le nombre de liaisons doubles/triples ou cycliques. 
+\small{Chaque carbone dans une liaison triple doit perdre deux hydrogènes. En commençant donc avec la formule d’un hydrocarbure saturé $(\ce{C_nH_{2n+2}})$ chaque fois que l’on rajoute une liaison entre deux carbones, il faut enlever deux hydrogènes. Ceci est également le cas quand on convertit une chaîne ouverte en chaîne cyclique. Donc en regardant la formule brute d’un hydrocarbure nous pouvons déterminer le nombre de liaisons doubles/triples ou cycliques. }
 \end{rmrq}
 
+\begin{rmrq}
+\small{Il existe une molécule cyclique particulière, le benzène, $\ce{C6H6}$ composé de 6 carbones cycliques reliés par des liaisons doubles conjuguées. Des molécules contenant un groupe benzène s'appellent souvent des molécules \textit{aromatique}. Le benzène est un précurseur important de nombreux composés organiques, tel que les matières plastiques, des parfums, des additifs alimentaires, et des médicaments. 
+
+\chemfig{\mcfabove{C}{H}=^[:180]\mcfabove{C}{H}-[:240,,,2]HC=^[:300,,2]\mcfbelow{C}{H}-\mcfbelow{C}{H}=^[:60,,,1]CH(-[:120,,1]\phantom{C})}
+\quad \quad \quad \chemfig{=^[:180]-[:240]=^[:300]-=^[:60](-[:120])} }
+\end{rmrq}
 
 \subsubsection{Ramifications}
 
@@ -218,18 +216,17 @@ Un alcool est une molécule organiques comportant un groupe hydroxyle $\ce{-OH}$
 
 \textbf{Ethanol : } 
 \chemfig{H_3C-[:330,,2]\mcfbelow{C}{\mcfright{H}{_2}}-[:30,,,1]OH} \quad \quad et en représentation topologique \quad  \chemfig{-[:330]-[:30,,,1]OH}
+\vspace{0.5cm}
 
-\textbf{Butan-2-ol : } \chemfig{H_3C-[:330,,2]\mcfbelow{C}{\mcfright{H}{_2}}-[:30]\mcfbelow{C}{H}(-[:90,,,1]OH)-[:330,,,1]CH_3} \quad \quad et en représentaiton topologique \quad  \chemfig{-[:330]-[:30](-[:90,,,1]OH)-[:330]}
-\vspace{1cm}
+\textbf{Butan-2-ol : } \chemfig{H_3C-[:330,,2]\mcfbelow{C}{\mcfright{H}{_2}}-[:30]\mcfbelow{C}{H}(-[:90,,,1]OH)-[:330,,,1]CH_3} \quad  et en représentaiton topologique \quad  \chemfig{-[:330]-[:30](-[:90,,,1]OH)-[:330]}
+\vspace{.5cm}
 
 \textbf{4-méthylpentan-2-ol : }
-
-\chemfig{CH_3-[:150,,1]\mcfbelow{C}{H}(-[:90,,,1]CH_3)-[:210]\mcfbelow{C}{\mcfright{H}{_2}}-[:150]\mcfbelow{C}{H}(-[:210,,,2]H_3C)-[:90,,,1]OH} \quad \quad et topologique \quad \chemfig{-[:150](-[:90])-[:210]-[:150](-[:90,,,1]OH)-[:210]}
-\vspace{1cm}
+\chemfig{CH_3-[:150,,1]\mcfbelow{C}{H}(-[:90,,,1]CH_3)-[:210]\mcfbelow{C}{\mcfright{H}{_2}}-[:150]\mcfbelow{C}{H}(-[:210,,,2]H_3C)-[:90,,,1]OH} et topologique \chemfig{-[:150](-[:90])-[:210]-[:150](-[:90,,,1]OH)-[:210]}
+\vspace{.5cm}
 
 \textbf{ 2-méthylpent-2-ène-4-ol : }
-
-\chemfig{CH_2=[:150,,1]C(-[:90,,,1]CH_3)-[:210]\mcfbelow{C}{\mcfright{H}{_2}}-[:150]\mcfbelow{C}{H}(-[:210,,,2]H_3C)-[:90,,,1]OH}  \quad \quad et topologique \quad \chemfig{=[:150](-[:90])-[:210]-[:150](-[:90,,,1]OH)-[:210]}
+\chemfig{CH_2=[:150,,1]C(-[:90,,,1]CH_3)-[:210]\mcfbelow{C}{\mcfright{H}{_2}}-[:150]\mcfbelow{C}{H}(-[:210,,,2]H_3C)-[:90,,,1]OH}  \; et topologique \; \chemfig{=[:150](-[:90])-[:210]-[:150](-[:90,,,1]OH)-[:210]}
 \end{eg}
 
 \subsubsection*{Cétones}
@@ -240,15 +237,10 @@ On nomme une cétone en rajoutant une terminaison « -one », précédée par le
 \begin{eg}
 
 \textbf{Propanone (acétone) : }
-
 \chemfig{H_3C-[:30,,2]C(=[:90]O)-[:330,,,1]CH_3} \quad et en topologique
 
-\textbf{Pentan-2-one : }
+\textbf{Pentan-2-one : } \hspace{5cm} \textbf{2-méthylhexan-4-one : }
 \vspace{2cm}
-
-\textbf{2-méthylhexan-4-one : }
-\vspace{2cm}
-
 \end{eg}
 
 \subsubsection*{Esters}
@@ -259,12 +251,12 @@ Un ester est une molécule organiques comportant un groupe carbonyle $\ce{C=O}$ 
     \includegraphics[width=\linewidth]{imgs/c5/esterific.jpg}
 \end{figure}
 
-Le nom d'un ester comporte deux terme (un pour l'acide d'origine, et l'autre pour l'alcool d'origine) :
+Le nom d'un ester comporte deux termes (un pour l'acide d'origine, et l'autre pour l'alcool d'origine) :
 \begin{itemize}
     \item Le premier, avec la terminaison –oate désigne la chaîne carbonée $\ce{R_1-COO-}$ numérotée à partir du carbone fonctionnel ;
     \item Le second, avec la terminaison –yle, est le nom du groupe alkyle $\ce{R_2}$  numéroté à partir de l’atome de carbone lié à l’atome d’oxygène $\ce{O}$. 
 \end{itemize}
-La réaction inverse d'estérification s'appelle l'hydrolyse. 
+La \textbf{réaction inverse} d'estérification s'appelle l'\textbf{hydrolyse}. 
 
 \begin{eg}
 \begin{itemize}
@@ -277,9 +269,8 @@ La réaction inverse d'estérification s'appelle l'hydrolyse.
 \end{itemize}
 \end{eg}
 
-
 \subsubsection*{Acides carboxyliques}
-Un acide carbosylique est une molécule organiques comportant un groupe carboxyle $\ce{-COOH}$ sur le squelette carboné. On nomme un acide carboxylique en rajoutant une terminaison « -oïque », précédée par acide. 
+Un acide carboxylique est une molécule organiques comportant un groupe carboxyle $\ce{-COOH}$ sur le squelette carboné. On nomme un acide carboxylique en rajoutant une terminaison « -oïque », précédée par acide. 
 
 \begin{eg}
 
@@ -290,12 +281,12 @@ Un acide carbosylique est une molécule organiques comportant un groupe carboxyl
 \subsubsection*{Aldéhydes}
 Les aldéhydes sont des composés organiques faisant partie de la famille des composés carbonylés, possédant une formule générale : 
 
- 
-Les aldéhydes sont donc des composés carbonylés avec un carbone primaire (i.e. carbone relié au plus à 1 atome de carbone), alors que les cétones sont des composés carbonylés avec un carbone secondaire (i.e. carbone lié à exactement deux atomes de carbone voisins). 
+Les aldéhydes sont donc des composés carbonylés avec un carbone primaire (i.e. carbone relié à seulement un autre atome de carbone), alors que les cétones sont des composés carbonylés avec un carbone secondaire (i.e. carbone lié à exactement deux atomes de carbone voisins). 
 
-Nomenclature : on ajoute le suffixe –al au nom de la chaîne principale au lieu de –ane. 
+Pour nommer un aldéhyde on ajoute le suffixe ``–al'' au nom de la chaîne principale au lieu de ``–ane''. 
 
 \begin{eg}
+
 \textbf{Méthanal} \hspace{3.5cm} \textbf{Butanal} \hspace{3.5cm} \textbf{3-méthylpentanal}
 \vspace{3cm}
 \end{eg}
@@ -311,10 +302,9 @@ Nomenclature : Le nom d’une amine $\ce{R-NH2}$  dérive de celui de l’alcane
 \end{figure}
 
 \subsubsection*{Amides}
-Ils sont le produit d’une réaction entre un acide carboxylique et une amine, de formule générale :
-(Les groupes R’ et R’’ peuvent être des atomes d’hydrogène ou des groupes alkyles, etc.)
+Ils sont le produit d’une réaction entre un acide carboxylique et une amine.
 
-Nomenclature : le nom d’un amide dérive de celui de l’alcane de la même chaîne carbonée en remplaçant la terminaison  –ane par la terminaison ``–amide''. La chaîne carbonée est numérotée à partir de l’atome de carbone $\ce{C=O}$ . Lorsque l’atome d’azote est lié à des groupes alkyle, le nom de l’amide est précédé de la mention N-alkyl (comme pour les amines).   
+Le nom d’un amide dérive de celui de l’alcane de la même chaîne carbonée en remplaçant la terminaison  ``–ane'' par la terminaison ``–amide''. La chaîne carbonée est numérotée à partir du carbone fonctionnel $\ce{C=O}$ . Lorsque l’atome d’azote est lié à des groupes alkyle, le nom de l’amide est précédé de la mention N-alkyl (comme pour les amines).   
 
 \begin{figure}[H]
     \centering
@@ -336,7 +326,7 @@ Nomenclature : le nom d’un amide dérive de celui de l’alcane de la même ch
 
 
 \subsection{Isomérie}
-Vous avez vu la notion d'isomérie pour la première fois en classe de seconde : des molécules ayant la même formule brute (composition) mais ayant des formules développée différentes sont des isomères. Cette définition est correcte, mais insuffisant, car il y a différentes formes d'isomérie. La définition précédente s'appliquent aux \textbf{isomères de constitution}. Mais il y a d'autre formes d'isomères aussi, comme les isomères de configuration, et de conformation : 
+Vous avez vu la notion d'isomérie pour la première fois en classe de seconde : des molécules ayant la même formule brute (composition) mais ayant des formules développées différentes sont des isomères. Cette définition est correcte, mais insuffisante, car il y a différentes formes d'isomérie. La définition précédente s'appliquent aux \textbf{isomères de constitution}. Mais il y a d'autre formes d'isomères aussi, comme les isomères de configuration, et de conformation : 
 
 \begin{figure}[H]
     \centering
@@ -344,9 +334,9 @@ Vous avez vu la notion d'isomérie pour la première fois en classe de seconde :
     \caption{Les différentes types d'isomérie.}
 \end{figure}
 
-Nous voyons maintenant, que les isomères rencontrés en secondes sont, en effet, simplement les isomères de constitution. Pour passer d'un isomère de constitution à un autre il est obligatoire de briser au moins une liaison quelque part, sinon les deux molécules sont simplement deux stéréoisomères, et non deux isomères de constitution. Il est important de noter que deux isomères sont deux molécules différentes, avec des propriétés physico-chimiques différentes (i.e. température de fusion/ébullition, densité, etc...).
+Nous voyons maintenant, que les isomères rencontrés en secondes sont, en effet, simplement les isomères de constitution. Pour passer d'un isomère de constitution à un autre il est \textbf{obligatoire de briser au moins une liaison} quelque part, sinon les deux molécules sont simplement deux stéréoisomères, et non deux isomères de constitution. Il est important de noter que deux isomères de constitution sont deux molécules différentes, avec des propriétés physico-chimiques différentes (i.e. température de fusion/ébullition, densité, etc...).
 
-\begin{eg} 
+\begin{eg} Deux isomères de constitution
 
 Propan-2-ol (gauche) et propan-1-ol/propanol (droite) : 
 \chemfig{-[:90](-[:30,,,1]OH)-[:150]}\quad \quad \chemfig{-[:30]-[:330]-[:30,,,1]OH}
@@ -354,7 +344,7 @@ Propan-2-ol (gauche) et propan-1-ol/propanol (droite) :
 
 \subsection{Polymères}
 
-Les polymères sont des macromolécules (grandes molécuels), composées d'une motif moléculaire (monomère), répété un grand nombre de fois. La plupart des plastiques figurent parmi les polymères (e.g. polystyrène). 
+Les polymères sont des macromolécules (grandes molécules), composées d'une motif moléculaire (monomère), répété un grand nombre de fois. La plupart des plastiques figurent parmi les polymères (e.g. polystyrène). 
 
 \begin{figure}[ht]
 \centering
@@ -374,7 +364,7 @@ Les polymères sont des macromolécules (grandes molécuels), composées d'une m
 \section{La synthèse organique}
 \begin{defn}{Synthèse}
 
-La synthèse (organique) est la séquence réactionnelle, c'est à dire la série des réactions chimiques nécessaire afin de synthétiser une molécule à partir d'une série de réactifs. 
+La synthèse (organique) est la séquence réactionnelle, c'est-à-dire la série des réactions chimiques nécessaires afin de synthétiser une molécule à partir d'une série de réactifs. 
 \end{defn}
 
 Pour réaliser une bonne synthèse il faut choisir : 
@@ -404,16 +394,16 @@ Pour réaliser une bonne synthèse il faut choisir :
 
 Nous allons donc voir, de manière plutôt superficielle, quelles sont les grandes catégories de réaction utiliser dans les synthèses, ainsi que les différentes types de réactions et la modification de la molécule organique qu'elles ciblent. 
 
-\subsection{différentes types de synthèse}
-Tout d'abord nous faisons la distinction entre deux types de réactions: celle visant un modification du squelette carboné, et celles qui visent une modification du ou des groupes caractéristiques. 
+\subsection{Différentes types de synthèse}
+Tout d'abord nous faisons la distinction entre deux types de réactions: celles visant un modification du squelette carboné, et celles qui visent une modification du ou des groupes caractéristiques. 
 
 \subsubsection{Modification de la chaîne carbonée}
 
 Une grande catégorie des réactions subies par les molécules organiques impliquent une modification de la chaîne carbonée. On peut classifier ces modifications en trois catégories. Des réactions qui entraînent une: 
 \begin{itemize}
-    \item \textbf{diminution du nombre d’atomes de carbone dans la chaine}: raccourcissement de la chaine 
-    \item \textbf{augmentation du nombre d’atomes de carbone dans la chaine}: allongement de la chaine
-    \item \textbf{conservation du nombre d’atomes de carbone dans la chaine}: modification de la structure de la chaine
+    \item \textbf{diminution du nombre d’atomes de carbone dans la chaîne}: raccourcissement de la chaîne. 
+    \item \textbf{augmentation du nombre d’atomes de carbone dans la chaîne}: allongement de la chaîne.
+    \item \textbf{conservation du nombre d’atomes de carbone dans la chaîne}: modification de la structure de la chaîne, sans changer le nombre d'atome de carbone. 
 \end{itemize}
 
 Voici quelques exemples de réactions ayant pour but la modification du squelette carbonée de la molécule : 
@@ -428,9 +418,7 @@ Le \textit{craquage catalytique}, utilisé dans l’industrie pétrolière, cons
 
 Afin de favoriser la transformation des alcanes en alcènes, le \textit{vapocraquage} est réalisé vers 800°C, en présence de vapeur d’eau.  
 
-\textbf{Allongement de la chaîne : }
-
-L'\textit{alkylation} est l’inverse du craquage: il s’agit de la réaction entre petites molécules carbonées pour former une chaine plus longue. Exemple : 
+\textbf{Allongement de la chaîne : } L'\textit{alkylation} est l’inverse du craquage: il s’agit de la réaction entre petites molécules carbonées pour former une chaîne plus longue. Exemple : 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth]{imgs/c5/alkylation.jpg}
@@ -439,7 +427,7 @@ L'\textit{alkylation} est l’inverse du craquage: il s’agit de la réaction e
 Un autre exemple, déjà vu, est la \textbf{polymerisation}. 
 
 \textbf{Modification de la structure de la chaîne : }
-En général on caractérise une chaine carbonée en fonction de sa structure qui peut être: \begin{itemize}
+En général on caractérise une chaîne carbonée en fonction de sa structure qui peut être: \begin{itemize}
     \item linéaire, ramifiée, ou cyclique
     \item saturée (que des liaisons simples)
     \item insaturée (si elle contient au moins une liaison double ou triple)
@@ -484,7 +472,7 @@ On ne va pas entrer dans les détails de cette catégorie de modification, mais 
 Voici quelques exemples: 
 \begin{itemize}
     \item Oxydation ménagée de l’octan-2-ol par l’acide hypochloreux $\ce{HClO}$ produit de l’octan-2-one.
-    (une réaction générale de forme : $groupe\; hydroxyle (alcool) \ce{<=>[oxydation][reduction]} groupe\; carbonyle (cétone)$
+    (une réaction générale de forme : $\textsc{ alcool }(groupe\; hydroxyle) \ce{<=>[oxydation][reduction]} \textsc{ cétone }(groupe\; carbonyle)$
     \item Propan-1-ol en présence d’un oxydant en défaut donne du propanal.
     \item Propan-1-ol en présence d’un oxydant en excès donne de l’acide propanoïque.
 \end{itemize}
@@ -492,9 +480,9 @@ Voici quelques exemples:
 \subsection{Catégories de réaction}
 On peut classer la plupart des réactions organiques en trois grandes catégories: 
 \begin{itemize}
-    \item réactions de substitution
-    \item réactions d’addition
-    \item réactions d’élimination
+    \item réactions de \textbf{substitution}
+    \item réactions d’\textbf{addition}
+    \item réactions d’\textbf{élimination}
 \end{itemize}
 
 \subsubsection*{Addition : }
@@ -503,7 +491,7 @@ Dans une réaction d’addition, des atomes, ou des groupes d’atomes, sont ajo
     \centering
     \includegraphics[width=0.8\linewidth]{imgs/c5/addtion.jpg}
 \end{figure}
-\subsubsection*{Elimination}
+\subsubsection*{Élimination : }
 Dans une réaction d’élimination, des atomes ou des groupes d’atomes, protégés par des atomes adjacents, sont éliminés pour former une liaison multiple. 
 \begin{figure}[H]
     \centering
@@ -520,7 +508,7 @@ Dans une réaction de substitution, un atome ou un groupe d’atomes est remplac
 Étant donné que la synthèse organique est la partie intégrale de la chimie organique, que ce soit dans un domaine de recherche, ou dans un domaine plus industriel (pharmaceutique, pétrolier, etc), les stratégies de synthèse font une partie intégrale de la synthèse, non-seulement dans le but d'optimiser la production, et faire des économies, mais aussi dans un but environnemental. 
 
 \subsection{Optimisation d'une étape}
-Ayant déjà abordé les notions concernant la cinétique chimique, il est possible d'optimiser une synthèse organique en jouant sur les facteur cinétiques. 
+Ayant déjà abordé les notions concernant la cinétique chimique, nous pouvons voir plus facilement comment il est possible d'optimiser une synthèse organique en jouant sur les facteur cinétiques. 
 
 L'optimisation peut être l'augmentation de la vitesse d'une réaction, mais aussi l'augmentation du rendement d'une réaction, ou encore augmentation de la sélectivité d'une réaction. 
 
@@ -536,26 +524,112 @@ Voici pourquoi un montage à reflux est souvent utilisé dans des synthèses org
 
 \begin{defn}{Rendement de réaction \eng{chemical yield}}
 \begin{itemize}
-    \item On appelle rendement d’une réaction $\eta$ le quotient de la quantité du produit effectivement obtenue $n_{exp}$  par la quantité maximale attendue, $x_{th}$.
+    \item On appelle rendement $\eta$(éta) d’une réaction le quotient de la quantité du produit effectivement obtenue $n_{exp}$  par la quantité maximale attendue, $n_{th}$.
     \item Le rendement s'exprime : \[ \eta = \frac{n_{exp}}{n_{th}} \]
     \item Le rendement de la synthèse est, dans le cas d’une synthèse multi-étape, égal au produit des rendements de chaque étape 
 \end{itemize}
 \end{defn}
 
-Le rendement de la réaction (comme la notion de rendement, en physique) est une mesure de l'efficacité de la réaction  dans la conversion des réactifs en produit. Nous voulons donc, naturellement, d'augmenter le rendement d'une réaction donnée, afin de favoriser la formation des produits. Ceci peut se faire par 
+Le rendement de la réaction (comme la notion de rendement, en physique) est une \textbf{mesure de l'efficacité de la réaction  dans la conversion des réactifs en produit}. Il est donc désirable d'augmenter le rendement d'une réaction donnée, afin de favoriser la formation des produits. Ceci peut se faire par :
 \begin{itemize}
-    \item Introduire l'un des réactifs en excès. 
-    \item Éliminer un des produits, du milieu réactionnel, pendant la synthèse. 
+    \item L'introduction d'un des réactifs en excès. 
+    \item L'élimination d'un des produits, du milieu réactionnel, pendant la synthèse. 
 \end{itemize}
-En effet - comme j'imagine vous avez eu les bons instincts - dans les deux cas, on joue sur le quotient de la réaction, afin de faire avancer la réaction dans le sens favorisant la formation des produits. C'est à dire \textbf{on force un déplacement de l'équilibre}. 
+En effet - comme j'imagine vous avez déjà compris - dans les deux cas, on \textbf{joue sur le quotient de la réaction} : on le modifie dans le but de faire \textbf{avancer la réaction dans le sens direct}, favorisant la formation des produits. c'est-à-dire \textbf{on force un déplacement de l'équilibre}. 
 
-Dans le premier cas on diminue le quotient on augmentant le dénominateur, et dans le deuxième cas on diminue le numérateur. Dans les deux cas, une fois $Q_r<K$ la réaction avance dans le sens directe, afin de rétablir l'équilibre, et mettre à terme la réaction. 
-
+Dans le premier cas on diminue le quotient en augmentant le dénominateur; et dans le deuxième cas on diminue le numérateur. Dans les deux cas, une fois $Q_r<K$ la réaction avance dans le sens directe, afin de rétablir l'équilibre, et mettre à terme la réaction. 
+\newpage
 \subsection{Protection \& déprotection}
+\begingroup
+\begin{wrapfigure}{r}{0.3\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{imgs/c5/polyfonct1.jpg}
+%\vspace{-5pt}
+\end{wrapfigure}
+
+\begin{defn}{Molécule polyfonctionnelle}
+
+Une molécule polyfonctionnelle est une molécule qui présente plusieurs groupes caractéristiques.
+
+\end{defn}
+\vspace{1cm}
+\begin{defn}{Réactif chimiosoéléctif}
+
+Une \textbf{réaction est sélective} lorsque, parmi plusieurs fonctions d’une même molécule, l’une d’elles réagit préférentiellement avec le réactif considéré. 
+
+Un \textbf{réactif chimiosélectif} est une espèce chimique qui ne transforme, dans des conditions données, qu’un seul groupe ou type de groupe caractéristique de la molécule polyfonctionnelle avec laquelle il réagit. 
+\end{defn}
+\vspace{0.5cm}
+
+\endgroup
+
+Il peut être nécessaire que lors d'une réaction, un des groupes caractéristiques doit être protégé, pour éviter qu'il soit modifié par la synthèse. 
+
+Dans cette situation, il y a des étapes supplémentaires rajoutées à la synthèse afin de \textbf{protéger les groupes}. Pour cela nous utilisons un composé qui s'appelle un ``groupe protecteur''. 
+
+\begin{defn}{Groupe protecteur}
+\begin{itemize}
+    \item Un groupe protecteur est un groupe caractéristique, volontairement créé dans la molécule d’un composé polyfonctionnel afin de \textbf{bloquer la réactivité} de l’une de ses fonctions. Cette fonction est temporairement transformée en une autre fonction. 
+    \item Le groupe protecteur utilisé doit :
+    \begin{itemize}
+        \item Réagir de manière \textbf{sélective} avec la fonction à protéger
+        \item Être \textbf{stable} lors des réactions suivantes ;
+        \item Pouvoir être \textbf{enlevé (clivé) facilement} et de manière sélective en fin de la réaction. 
+    \end{itemize}
+    \item La protection d’un groupe ajoute \textbf{au moins deux étapes} à la synthèse. Il faut donc que les étapes de protection et de déprotection aient lieu avec de très bons rendements. 
+\end{itemize}
+\end{defn}
+
+De manière générale le déroulement se fait en trois étapes : 
+\begin{enumerate}
+    \item \textbf{Protection : }La réaction a lieu entre le groupe protecteur et le/les groupe(s) caractéristique(s) à protéger. 
+    \item \textbf{Réaction de synthèse : }La réaction de la synthèse a lieu, comme prévu. 
+    \item \textbf{Déprotection : }La réaction inverse de la première étape a lieu, dans le but d'enlever le groupe protecteur. 
+\end{enumerate}
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}{.48\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=.95\linewidth]{imgs/c5/protect.jpg}  
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{imgs/c5/protect2.jpg}  
+\end{subfigure}
+\caption{Deux exemples de réactions nécessitant de la protection.}
+\end{figure}
 
 \subsection{Synthèse éco-responsable}
 
-Pour résumer : 
+Depuis un certain nombre d'année, les facteur matériels et économiques ne sont plus les seuls à considérer dans la conception des synthèses organiques. L'impact environnemental des processus chimiques est un facteur aussi important dans cette conception. 
+
+Douzes principes ont étés proposer à respecter, par les chimistes américains Paul Anastas et John C. Warner en 1998, dont : 
+
+\begin{itemize}
+    \item \textbf{Prévention} : il vaut mieux produire moins de déchets qu'investir dans l'assainissement ou l'élimination des déchets.
+    \item L'\textbf{économie d'atomes} : les synthèses doivent être conçues dans le but de maximiser l'incorporation des matériaux utilisés au cours du procédé dans le produit final.
+    \item Lorsque c'est possible, il faut \textbf{supprimer l'utilisation de substances auxiliaires} (solvants, agents de séparation, ...) ou utiliser des substances inoffensives
+    \item Lorsque la technologie et les moyens financiers le permettent, les matières premières utilisées doivent être \textbf{renouvelables} plutôt que non-renouvelables.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c5/12principes.jpg}
+\end{figure} 
+
+Un des points les plus importants et les plus centraux est la question de carbone, et l’addition du carbone (sous forme de dioxyde de carbone principalement). C’est le carbone qui joue le rôle centrale dans la crise croissante (et potentiellement existentielle) du changement climatique. Par conséquent, la plus part de la réflexion et de la recherche tournent autour de la question de la maîtrise de notre procuration, utilisation et rejet du carbone dans notre environnement planétaire. Nous allons donc rencontrer des notions comme la \textbf{séquestration} ou la \textbf{valorisation} du carbone. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c5/vert1.jpg}
+\end{figure} 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c5/vert2.jpg}
+\end{figure} 
+
+\section*{Pour résumer ... }
 
 \begin{figure}[H]
     \centering
@@ -567,11 +641,26 @@ Pour résumer :
     \includegraphics[width=0.95\linewidth]{imgs/c5/catRX.jpg}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=.85\linewidth]{imgs/c5/recapgroupes.jpg}
+    \includegraphics[width=.9\linewidth]{imgs/c5/recapgroupes.jpg}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c5/recapSynth.jpg}
+\end{figure}
+
+\section{Exercices résolus}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c5/xoVert.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/c5/xosynth2.jpg}
+\end{figure}
 
 
 
