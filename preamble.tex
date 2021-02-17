@@ -38,6 +38,9 @@ urlcolor=cyan,
 \usepackage{chemformula}
 \usepackage[version=4]{mhchem}
 
+% -------------- Circuits -------------------
+\usepackage[european, straightvoltages]{circuitikz}
+
 % Title & headers
 \usepackage[explicit]{titlesec}
 % Raised Rule Command:
@@ -47,7 +50,7 @@ urlcolor=cyan,
 \titleformat{\section}{\Large\bfseries}{\thesection. }{0em}{#1\,\raisedrulefill[0.4ex]{1pt}}
 % pour ecrire sur +sieurs colonnes
 \usepackage{multicol}
-\setlength{\columnseprule}{0.25pt}
+\setlength{\columnseprule}{0pt}
 \setlength{\columnsep}{60pt}
 % Fusion de lignes de tableaux.
 \usepackage{multirow}
@@ -77,6 +80,12 @@ urlcolor=cyan,
 \newcommand{\pfd}[1]{\sum \vec{F}_{ext_{#1}} &= \od{\vp_{#1}}{t} = m\cdot\va_{#1}}
 \newcommand{\C}{\degree C}
 \newcommand{\Delt}{\Delta t}
+
+% --- Circuits ------------
+\newcommand{\bipole}[1]{
+\begin{circuitikz} \draw
+(0,0) to[ #1 ] (2,0); 
+\end{circuitikz} {\hspace{5mm}}}
 
 % Chimie ---------------------------------
 \newcommand{\oxo}{\ce{H3O+}_{(aq)}}
