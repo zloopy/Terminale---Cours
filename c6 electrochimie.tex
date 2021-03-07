@@ -1,0 +1,180 @@
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
+\input{preamble}
+
+% Title & headers 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{SciPhy : Terminale spé}
+\rhead{$\chi $ - 6 : Electrolyse}
+\chead{2020-28}
+\rfoot{Page \thepage}
+\lfoot{\textcopyright\; S Zayyani}
+\renewcommand{\footrulewidth}{0.1pt}% default is 0pt
+
+\title{\large Chimie - Chapitre 6 \\ \LARGE  L'électrolyse : évolution forcée d'un système chimique}
+\date{}
+\author{}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{2mm}
+
+%%%%%%%%%%% For wrapfigure 
+\setlength{\intextsep}{-5pt}%
+\setlength{\columnsep}{10pt}%
+
+
+
+\begin{document}
+\maketitle
+\vspace{-1cm}
+\begin{tcolorbox}[title=Notions de la classe de première à rappeler]
+oxydoréduction ; réaction chimique ; notions de base d'électricité
+%\tcblower
+\end{tcolorbox}
+\tableofcontents
+
+\section{Rappels}
+Quelques définitions et notions à se rappeler : 
+\begin{itemize}
+    \item Un \textbf{oxydant} est une espèce chimique capable de \textbf{gagner} (ou capter) des électron 
+    \item On dit que l’oxydant est réduit.  
+    \item Une \textbf{réduction} est donc une \textbf{capture d’électrons}.
+    \item Un \textbf{réducteur} est une espèce chimique capable \textbf{céder} (ou perdre) des électrons.
+    \item On dit que lors de cette réaction le réducteur s’oxyde.  
+    \item Une \textbf{oxydation} est donc une perte d’\textbf{élection}. 
+\end{itemize}
+
+Pour résumer : 
+\begin{align*}
+    \ce{Oxydant + n e- &->[reduction] Reducteur } \\
+    \ce{Reducteur &->[oxydation] Oxydant + n e- }
+\end{align*}      
+Le couple \textit{rédox} est donc défini : 
+\begin{itemize}
+    \item Une espèce oxydante et une espèce réductrice forme un couple oxydant/réducteur (Ox/Red) si l’on peut passer de l’une à l’autre par gain ou perte d’électron(s).
+    \item Un tel couple est noté ox/red (l’oxydant noté toujours d’abord, à gauche).  
+    \item On parle donc d’oxydante et de réducteur conjugué.  
+    \item on associe donc à un couple ox/red une demi-équation d’oxydoréduction (rédox) : $\ce{Ox + ne- = Red}$
+\end{itemize}
+Afin de trouver la demi-équation d'un couple rédox : 
+\begin{mdframed}[backgroundcolor=red!5]
+\begin{enumerate}
+    \item Écrire l’ébauche de la demi-équation sans les coefficients stœchiométriques
+    \item Équilibrer les atomes de l’élément commun à l’oxydant et au réducteur.
+    \item Équilibrer les atomes d’oxygène en ajoutant des molécules d’eau  $\ce{H2O_{(\ell)}}$
+    \item Équilibrer les atomes d’hydrogène avec les ions $\ce{H+_{(aq)}}$.
+    \item Équilibrer les électrons en utilisant des électrons $\ce{e-}$.
+\end{enumerate}
+\end{mdframed}
+
+\begin{rmrq}
+\begin{itemize}
+    \item Il est très important de noter que les transformations étudiées dans ce chapitre ont lieu en solution aqueuse, mais que comme les électrons libres ne peuvent exister en solution, cette écriture est formelle et constitue une schématisation.  
+    \item Tous les électrons perdus par le réducteur sont donc captés par l’oxydant.  
+    \item Lorsque la présence des ions $\ce{H+_{(aq)}}$ est nécessaire afin d’équilibrer la demi-équation, cela indique que la réaction a lieu dans un milieu acide (ou milieu acidifié).  
+	\item Il y a bien un lien entre la structure électronique d’un élément, son placement dans la classification périodique et son caractère oxydant ou réducteur.  Les principaux réducteurs sont les métaux et les alcalins-terreux.  Les principaux oxydants sont les corps simples (en particulier le dioxygène), et les dihalogènes.  
+\end{itemize}
+\end{rmrq}
+
+\subsection*{Réactions de rédox}
+\begin{itemize}
+    \item Une réaction d’oxydoréduction, aussi appelée une réaction rédox, est une réaction caractérisée par un transfert d’électrons entre deux réactifs : l’oxydant et le réducteur.  
+    \item Il s’agit donc d’une réaction entre deux couple rédox.
+    \item L’oxydant d’un couple réagit avec le réducteur de l’autre couple, et les produits de la réactions sont le réducteur et l’oxydant conjugué.
+\end{itemize}
+
+L’équation chimique rédox entre les couples $\ce{Ox_1/Red_1}$ et $\ce{Ox_2/Red_2}$ avec 
+$\begin{cases}       
+\ce{Ox_1 + n1e- = Red_1}\\
+\ce{Ox_2 + n2e- = Red_2}
+\end{cases}$:
+\[\ce{n2 Ox1 + n1 Red2 -> n1 Ox2 + n2 Red1}\]
+
+\section{Classification des couples rédox}
+Jusqu'alors, en voyant deux couples rédox, nous n'avions pas d'idée quel oxydant (de quel couple) réagirait le réducteur de l'autre couple.  Par conséquent en regardant deux couples, par exemple $\couple{Zn^2+}{Zn}$ et $\couple{Ag+}{Ag}$, il existait deux réactions possibles : entre $\ce{Zn^2+}$ et $\ce{Ag}$, ou entre $\ce{Zn}$ et $\ce{Ag+}$. 
+
+En réalité il n'y a qu'une seule réaction \textit{spontanée} qui se produit à chaque fois entre ces deux couples: 
+
+\[ \ce{2Ag+ + Zn -> 2 Ag + Zn^2+} \]
+
+\begin{wraptable}[11]{r}{0.4\linewidth} 
+\begin{rmrq} 
+\small{Pour aller plus loin, à chaque couple rédox est associé un ``potentiel standard d'oxydoréduction'' qui est une mesure quantitative de cette puissance oxydative. Les valeurs sont exprimées en volts, et rélatives à une valeur de $0$ attribuée au couple $\couple{H+}{H2}$. Une pile donc, constituée de deux demi-équation de deux couple rédox, génère une tension égale à la différence de potentiel standard des deux couples. } 
+\end{rmrq} 
+\end{wraptable}
+En fait, tout oxydant n'est pas ``égal'', c'est à dire que certains oxydant sont ``plus oxydant'' que d'autres. C'est le cas ici de l'ion $\ce{Ag+}$ qui est plus puissant que l'ion $\ce{Zn^2+}$. On parle ici de la \textbf{puissance oxydative}, qui est une propriété naturelle des différentes espèces chimiques. 
+
+La manière la plus simple de savoir quels sont les réactifs et les produits d'une réaction de rédox entre deux couples, est de place les deux couples sur un axe verticale (le sens vers la haut pour la puissance croissante d'oxydation), et puis appliquer la ``règle du gamma", comme dans dans l'image ci-contre. 
+
+Le tableau suivant donne une classification des différents couple rédox en fonction de leur puissance d'oxydation. 
+
+\section{Électrolyse}
+Il est très important de comprendre que tout ce que nous avons appris dans la partie précédente est le cas pour des réactions qui se produisent de \textit{manière spontanée}. Cela veut dire qu'elle se produisent sans un apport énergétique de notre part (plus ou moins si l'on veut être rigoureux). 
+
+Il ne faut pas oublier le principe d'équilibre que nous avons déjà vu souvent (dans beaucoup de différents domaines) : un système tend naturellement vers un état d'équilibre. L'étude de la pile que nous avons fait dans un chapitre précédent est un très bon exemple de ce phénomènes. Deux couples rédox mis-en-contacte qui spontanément produisent une réaction électrochimique. L'état finale de la pile (i.e. 
+
+Par ailleurs, la tension générée par la pile dépende (comme indiqué dans une remarque ci-avant) de la différence du potentiel standard entre les deux couples rédox mise-en-jeu. 
+
+
+
+\begin{exo}
+Y-a-i-il une réaction si : 
+\begin{itemize}
+    \item On plonge uen lame de fer dans une solution de nitrate d'argent? 
+    \vspace{1cm}
+    \item on plonge uen lame d'argent dans une solution d'acide chlorhydrique? 
+    \vspace{1cm}
+    \item on plonge une lame de magnésium dans une solution de chlorure de nickel II ? 
+    \vspace{1cm}
+\end{itemize}
+\end{exo}
+
+
+\subsection{Réactions non-spontanées}
+
+Est-il alors possible de ``forcer'' une réaction qui ne peut pas avoir lieu spontanément? Serait-il possible, par exemple, de forcer une réaction entre l'argent métallique et l'ion de zinc? 
+
+Faisons un raisonnement ensembles : Nous avons déjà établi qu'une pile est une réaction d'oxydoréduction spontanée, et qui génère une tension, jusqu'à ce que les réactifs s'épuisent. Mais il y a des piles que nous utilisons dans des appareils, comme des téléphones portables, qui se vide en journée et que l'on ``recharge'' pendant la nuit, pour réutiliser le lendemain; et on les recharge en les branchant sur une prise de secteur, \textbf{autrement dit on les recharge en leur appliquant une tension électrique}.  
+
+Cette recharge n'est pas possible sans qu'on \textbf{force} cette tension sur leur batterie. Voilà donc la réponse à notre question du départ : Il existe des systèmes susceptibles de subir une transformation, sans qu'ils évoluent de manière spontanée. \textbf{Dans le cas des réaction d'oxydoréduction, une telle transformation non-spontanée ou forcée s'appelle l'électrolyse. }
+
+\subsection{Principe de l'électrolyse}
+
+\begin{defn}{Électrolyse\eng{electrolysis}}
+\begin{itemize}
+    \item Lors d'une électrolyse, un générateur électrique impose un transfert d'électrons correspondant à une transformation qui n'aurait pas lieu spontanément. 
+    \item L'électrolyse est une transformation forcée. 
+    \item Pour qu'une électrolyse puisse se produire, il faut que la tension imposée par le générateur soit supérieure à celle de la réactions d'oxydoréduction spontanée (correspondant à la différence des potentiel standard des couples mise-en-jeu). 
+\end{itemize}
+\end{defn}
+
+L'électrolyse a lieu dans un appareil nommée un électrolyseur. L'électrolyseur est constitué d'une cuve remplie d'une solution électrolytique. Les deux électrodes baignant dans la solution sont reliées aux bornes du générateur. C'est au niveau des électrodes qui se produisent les deux demi-équation rédox correspondant à la réaction entre les deux couples:\textbf{ l'Anode le siège de l'oxydation, et la cathode le siège de la réduction}. 
+
+\begin{exo}
+Justifier le fait que l'anode est lié au pôle + du générateur, et la cathode au pôle - . 
+\vspace{2cm}
+\end{exo}
+
+
+INSERT SCHEMA ELECTROLYSE
+
+
+
+\subsection{Réactions forcée \& constante d'équilibre}
+
+Comme nous avons déjà vu, nous pouvons expliquer et décrire l'électrolyse grâce aux notions du quotient et de la constante de réaction. Une réaction spontanée va toujours dans le sens qui va pousser le quotient de la réaction vers la constante de la réaction. Il va de soi donc qu'une électrolyse, n'étant pas spontanée, va transformer les quantités des matières des réactifs et des produits dans le sens qui éloigne le quotient de la réaction de la constante $K$. Tant que le générateur impose sa tension, le système électrochimique reste hors de l'état de l'équilibre. 
+
+EXO AVEC QUOTIENTS.....
+
+\section{Etude quantitative}
+
+
+\section{Accumulateurs \& d'autres applications}
+
+
+
+
+\end{document}

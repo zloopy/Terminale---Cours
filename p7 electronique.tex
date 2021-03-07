@@ -31,14 +31,14 @@
 \maketitle
 \vspace{-1cm}
 \begin{tcolorbox}[title=Notions de la classe de première à rappeler]
-calcul d'un logarithme ; solvatation d'un proton libre dans l'eau ; Concentration molaire
+notions de bases des circuits, tension et intensité, conducteurs ohmiques, Lois de Kirchoff
 %\tcblower
 \end{tcolorbox}
 \tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Section 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Rappels (du collège \& de la seconde)}
-Nous allons commencer par quelques rappels des notions sur les circuits électriques que vous auriez du voir au collège. Il s'agit principalement de  définitions.
+Nous allons commencer par quelques rappels des notions sur les circuits électriques que vous auriez du voir au collège. Il s'agit principalement de définitions.
 
 \subsection{Dipôles électriques}
 
@@ -370,16 +370,16 @@ En électronique il y a trois dipôles principaux que l'on étudie : la résista
 
 \begin{defn}{Condensateur\eng{capacitor}}
 \begin{itemize}
-    \item Un condensateur est un dipôle électronique composé de deux surface conductrices, appelées des armatures, séparées d'une distance. 
+    \item Un condensateur est un dipôle électronique composé de deux surface conductrices, appelées des \textbf{armatures}, séparées d'une distance. 
     \item Les armatures sont souvent plates et parallèles, séparées d'un isolant, souvent l'air. 
     \item Le symbole universel du condensateur est \bipole{C}. 
     \item Le condensateur est caractérisé par sa capacité $C$, qui s'exprime en $Farads\; (F)$. 
 \end{itemize}
 \end{defn}
 
-Lorsqu'on applique une tension aux borne du condensateur, il y a une accumulation de charge $Q$ qui commence sur les armatures. Ceci est du à la présence de l'isolant entre ces deux dernières. Bien sur la capacité d'un condensateur dépend de divers facteurs : la surface des armatures, leur matériau, la distance entre elles, la nature de l'isolant, etc. \textbf{On peut considérer le condensateur donc comme un dipôle stockeur de charge. }
+Lorsqu'on applique une tension aux borne du condensateur, il y a une accumulation de charge $Q$ qui commence sur les armatures. Ceci est du à la présence de l'isolant entre ces deux dernières. La capacité $C$ d'un condensateur dépend de divers facteurs : la superficie des armatures, leur matériau, la distance entre elles, la nature de l'isolant, etc. \textbf{On peut considérer le condensateur donc comme un dipôle ``stockeur'' de charge. }
 
-Le fonctionnement, et le comportement d'un condensateur est en raison de l'accumulation de la charge sur ses armatures (phase de charge), et la décharge de ses armatures (phase de décharge), où il perds la charge accumulée. La charge accumulée est créé une tension entre les bornes du condensateur, contre la tension imposée par le générateur. 
+Le fonctionnement, et le comportement d'un condensateur est en raison de l'accumulation de la charge sur ses armatures (phase de charge), et la décharge de ses armatures (phase de décharge), où il perds la charge accumulée. La \textbf{charge accumulée créé une tension entre les bornes du condensateur}, contre la tension imposée par le générateur. 
 
 \subsection{Caractéristiques du condensateur}
 
@@ -412,7 +412,7 @@ La charge sur chaque armature est donc : $q^+ = C\cdot u_C$ et $q^- = -C\cdot u_
 \caption{}
 \end{figure}
 
-Nous avons aussi maintenant tout ce qu'il nous faut pour établir une relation entre l'intensité (instantanée) du courant et la tension entre les bornes du condensateur : 
+Nous avons alors tout ce qu'il nous faut pour établir une relation entre l'intensité (instantanée) du courant et la tension entre les bornes du condensateur : 
 
 \begin{align}
     i &= \od{q}{t} = \od{\left(C\cdot u_C\right)}{t} \\
@@ -424,9 +424,9 @@ Nous avons aussi maintenant tout ce qu'il nous faut pour établir une relation e
 Un circuit contenant un conducteur ohmique $R$ et un condensateur $C$ s'appelle un circuit RC (quelle originalité, je sais). Ces dipôles peuvent être branchés en série ou en dérivation. Pour commencer nous nous intéressons aux cas les plus simples : le circuit RC en série. 
 
 \subsection{Régime transitoire \& régime permanent}
-La conducteur ohmique est un dipôle qui réagit de manière instantanée et proportionnelle à l'intensité du courant qui le parcourt. Avec l'inclusion du condensateur la réponse du système est plus ``lent'' dans ses réactions, c'est à dire qu'il faut un temps pour les tensions et les intensités se stabilisent. 
+La conducteur ohmique est un dipôle qui réagit de manière instantanée et proportionnelle à l'intensité du courant qui le parcourt. Avec l'inclusion du condensateur la réponse du système est plus ``lente'' dans ses réactions, c'est à dire qu'il faut un temps pour que les tensions et les intensités se stabilisent. 
 
-On fait donc la différence entre le \textbf{régime permanent} (ou continu, ou stationnaire) où les tensions et les intensité dans les branches du circuits et dans les dipôles se sont stabilisées, le \textbf{régime variable ou transitoire}  où les tensions et les intensité dans le circuit sont en cours de variation afin d'atteindre leurs valeurs stables en régime permanent. 
+On fait donc la différence entre le \textbf{régime permanent} (ou continu, ou stationnaire) où les tensions et les intensité dans les branches du circuits et dans les dipôles se sont stabilisées (des valeurs constantes), et le \textbf{régime variable ou transitoire}  où les tensions et les intensité dans le circuit sont en cours de variation afin d'atteindre leurs valeurs stables en régime permanent. 
 
 \begin{figure}[H]
     \centering
@@ -450,7 +450,7 @@ Considérons le circuit électrique ci-après (cf Figure.\ref{fig:decharge}). No
 \label{fig:decharge}
 \end{figure}
 
-Notre objectif principal dans les deux cas est d'obtenir l'équation (différentielle) du circuit, dont la solution nous permettant de modéliser l'évolution de la tension (ou de la charge électrique) dans le circuit. 
+Notre objectif principal dans les deux cas est d'obtenir l'équation (différentielle) du circuit, dont la solution nous permet de modéliser l'évolution de la tension (ou de la charge électrique) dans le circuit.
 
 \subsection{Circuit de charge}
 
@@ -478,13 +478,13 @@ D'après la loi des mailles :
 Pour trouver l'équation du système en termes de $u_C$ substituons avec $(3)$ : 
 \[ u_C + RC\od{u_C}{t} = E\]
 
-Mettons cette équation en forme canonique : 
+Mettons cette équation en sa forme canonique : 
 \begin{equation}
     \od{u_C}{t} + \frac{1}{RC}u_C = \frac{E}{RC}
 \end{equation} 
 
 Pour trouver l'équation du système en termes de $u_C$ substituons avec $(1)$ et $(2)$ : 
-\vspace{2cm}
+\vspace{1.5cm}
 
 Mettons cette équation en forme canonique : 
 \begin{equation}
@@ -494,7 +494,7 @@ Mettons cette équation en forme canonique :
 \end{multicols}
 \\
 
-Nous appelons le produit $RC$, la constante du temps $\tau = RC$; et nous avons donc: 
+Nous appelons le produit $RC$, la \textbf{constante du temps} $\tau = RC$; et nous avons donc: 
 \begin{align}
     \od{u_C}{t} + \frac{1}{\tau}u_C &= \frac{E}{\tau} \\
     \od{q}{t} + \frac{1}{\tau}q &= \frac{E}{R}
@@ -505,12 +505,12 @@ Les solutions aux équations (6) et (7) sont :
     q(t) &= 
 \end{align}
 
-\begin{exo}
+\begin{exo} %% EXO 1
 A l'aide d'une analyse dimensionnelle justifier l'appellation ``constante du temps'' pour la constante $\tau$ . 
 \vspace{2cm}
 \end{exo}
 
-\begin{exo}
+\begin{exo}%% EXO 2
 Donner la solution générale aux équations (6) et (7), et puis démontrer comment nous obtenons les solutions (8) et (9). Expliciter vos raisonnements et suppositions. 
 \vspace{5cm}
 \end{exo}
@@ -524,7 +524,7 @@ Visualisons l'évolution de la tension $u_C(t)$ entre les bornes du condensateur
 
 La charge $q(t)$ évolue de la même manière (même fonction), avec la seule différence étant la valeur de l'asymptote qui correspond bien à $CE$. 
 
-\begin{exo}
+\begin{exo}  %Exo 3 
 Comment évolue l'intensité du courant $i(t)$? Montrer grâce à un calcul. Montrez le graphique de $i(t)$. 
 \vspace{5cm}
 \end{exo}
@@ -536,8 +536,8 @@ Comment évolue l'intensité du courant $i(t)$? Montrer grâce à un calcul. Mon
 
 Comme nous avons vu dans la partie précédente, un condensateur se trouve soit dans un des deux états : 
 \begin{itemize}
-    \item Tant que le condensateur est branché sur un générateur, la tension $u_c $ et le condensateur accumule de la charge : il est en phase de charge. En mode charge, le condensteur est un récepteur. 
-    \item En absence de la tension imposée par un générateur, la charge accumulée par le condensteur commence à dissiper et repartant dans le circuit, et la tension $u_c$ commence à diminuer : c'est la phase de décharge. En mode décharge le condensateur se comporte comme un \textbf{générateur}. 
+    \item Tant que le condensateur est branché sur un générateur, la tension $u_c $ et le condensateur accumule de la charge : il est en phase de charge. En mode charge, le condensateur est un récepteur. 
+    \item En absence de la tension imposée par un générateur, la charge accumulée par le condensateur commence à dissiper, et repartant dans le circuit la tension $u_c$ commence à diminuer : c'est la phase de décharge. En mode décharge le condensateur se comporte comme un \textbf{générateur}. 
 \end{itemize}
 
 \begin{figure}[H]
@@ -572,7 +572,7 @@ Voici comment la tension $u_C(t)$ évolue avec le temps :
     \includegraphics[width=0.7\linewidth]{imgs/p7/courbeDecharge.png.jpg}
 \end{figure}
 
-\begin{exo}
+\begin{exo}   %%% %Exo 4
 Faire la démonstration pour obtenir les équations (10) et (11), avec $\tau = RC$. Montrer comment nous obtenons les solutions (12) et (13). 
 \vspace{10cm}
 \end{exo}
@@ -583,7 +583,7 @@ Il existe différentes manières de déterminer la valeur de la constante du tem
 \begin{itemize}
     \item Quand $t=\tau$ alors $u_c(\tau) = E\left(1-e^{-1}\right) = 0,63E$. En repérant l'abscisse correspondant à l'ordonnée $0,63E$, et cela correspondrait à $\tau$. 
     \item Dans le cas d'une courbe de décharge, $u_c(\tau) = E\cdot e^{-1} = 0,37E$.
-    \item Une autre propriété de la fonction exponentielle est que la tangente à l'origine de la courbe ($u_C(t)$) coupe l'asymptote à l'abscisse $t=\tau$. Pour rappelle l'asympotote pour un condensateur en charge correspond à $u_C = E$, et pour un condensateur en décharge $u_C = 0$
+    \item Une autre propriété de la fonction exponentielle est que la tangente à l'origine de la courbe ($u_C(t)$) coupe l'asymptote à l'abscisse $t=\tau$. Pour rappelle l'asymptote pour un condensateur en charge correspond à $u_C = E$, et pour un condensateur en décharge $u_C = 0$
 \end{itemize}
 
 \begin{figure}[H]
@@ -603,7 +603,7 @@ Il existe différentes manières de déterminer la valeur de la constante du tem
 Une autre propriété de la fonction exponentielle (que nous avons déjà vu dans les autres chapitres où la fonction exponentielle est exploitée) est que au bout de $t\approx5\tau$ nous sommes passé en régime permanent. 
 \end{rmrq}
 
-\begin{exo}
+\begin{exo} %%%Exo 5
 Montrer que $t\approx5\tau$ est une bonne approximation de la durée du régime transitoire. 
 \vspace{3cm}
 \end{exo} 
