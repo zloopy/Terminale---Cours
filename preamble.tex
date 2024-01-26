@@ -10,10 +10,15 @@
 urlcolor=cyan,
 }
 \usepackage{lipsum}
+\usepackage{epigraph}
 %to resume numbering in a list
 \usepackage{enumitem}
 %----- arrows 
 \usepackage{extarrows}
+
+%    differential equatiosn 
+\usepackage{diffcoeff}   %\diff[2]{x}{y}
+
 
 %%%%%%pour ecrire en français avec les accents
 \usepackage[utf8]{inputenc}
@@ -33,6 +38,7 @@ urlcolor=cyan,
 \usepackage{framed}
 \usepackage{mdframed}
 
+
 %%%%%%%chemistry frmulae
 \usepackage{chemfig}
 \usepackage{chemformula}
@@ -48,6 +54,7 @@ urlcolor=cyan,
 % Arg 2 - Thickness of the rule
 \newcommand{\raisedrulefill}[2][0ex]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
 \titleformat{\section}{\Large\bfseries}{\thesection. }{0em}{#1\,\raisedrulefill[0.4ex]{1pt}}
+
 % pour ecrire sur +sieurs colonnes
 \usepackage{multicol}
 \setlength{\columnseprule}{0pt}

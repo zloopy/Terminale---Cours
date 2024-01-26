@@ -1,0 +1,138 @@
+\usepackage{amsmath,amsfonts,amsthm,amssymb,varioref,times, commath}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks=true,
+ linkcolor=blue,
+ filecolor=magenta, 
+urlcolor=cyan,
+}
+\usepackage{lipsum}
+%to resume numbering in a list
+\usepackage{enumitem}
+%----- arrows 
+\usepackage{extarrows}
+
+%    differential equatiosn 
+\usepackage{diffcoeff}   %\diff[2]{x}{y}
+
+
+%%%%%%pour ecrire en français avec les accents
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % load a font with all the characters
+\usepackage{units}
+%%%%%%%Image-related packages
+\usepackage{wrapfig}
+\usepackage{float, graphicx}
+\graphicspath{ {./img/} }
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+
+%%%%%%%pour faire des cadres
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage[framemethode=tikz]{mdframed}
+
+
+%%%%%%%chemistry frmulae
+\usepackage{chemfig}
+\usepackage{chemformula}
+\usepackage[version=4]{mhchem}
+
+% -------------- Circuits -------------------
+\usepackage[european, straightvoltages]{circuitikz}
+
+% Title & headers
+\usepackage[explicit]{titlesec}
+% Raised Rule Command:
+% Arg 1 (Optional) - How high to raise the rule
+% Arg 2 - Thickness of the rule
+\newcommand{\raisedrulefill}[2][0ex]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
+\titleformat{\section}{\Large\bfseries}{\thesection. }{0em}{#1\,\raisedrulefill[0.4ex]{1pt}}
+
+% pour ecrire sur +sieurs colonnes
+\usepackage{multicol}
+\setlength{\columnseprule}{0pt}
+\setlength{\columnsep}{60pt}
+% Fusion de lignes de tableaux.
+\usepackage{multirow}
+% Position verticale des lettres dans la ligne de tableau.
+\usepackage{array}
+
+% physics -----------------------------------------------------------
+\newcommand{\To}{\longrightarrow}
+\newcommand{\gpl}{\; g\cdot L^{-1}}
+\newcommand{\gpmol}{\; g\cdot mol^{-1}}
+\newcommand{\mpl}{\; mol\cdot L^{-1}}
+\newcommand{\mps}{\; m\cdot s^{-1}}
+\newcommand{\rps}{\; rad\cdot s^{-1}}
+\newcommand{\kph}{\; km\cdot h^{-1}}
+\newcommand{\mpss}{\; m\cdot s^{-2}}
+\newcommand{\Dt}{\Delta t}
+\newcommand{\vv}{\vec{v}}
+\newcommand{\va}{\vec{a}}
+\newcommand{\vp}{\vec{p}}
+\newcommand{\vf}{\vec{F}}
+\newcommand*{\Vf}[1]{\overrightarrow{F_\ensuremath{{#1}}}}
+\newcommand{\es}[1]{\cdot10^{#1}}
+\newcommand{\eng}[1]{\textcolor{purple}{(= #1})}
+\usepackage{harpoon}
+%\newcommand*{\vect}[1]{\overrightharp{\ensuremath{#1}}}
+\newcommand*{\Vect}[1]{\overrightarrow{\ensuremath{#1}}}
+\newcommand{\pfd}[1]{\sum \vec{F}_{ext_{#1}} &= \od{\vp_{#1}}{t} = m\cdot\va_{#1}}
+\newcommand{\C}{\degree C}
+\newcommand{\Delt}{\Delta t}
+
+% --- Circuits ------------
+\newcommand{\bipole}[1]{
+\begin{circuitikz} \draw
+(0,0) to[ #1 ] (2,0); 
+\end{circuitikz} {\hspace{5mm}}}
+
+% Chimie ---------------------------------
+\newcommand{\oxo}{\ce{H3O+}_{(aq)}}
+\newcommand{\eau}{\ce{H2O}_{(\ell)}}
+\newcommand{\OH}{\ce{HO-}_{(aq)}}
+\newcommand{\AH}{\ce{AH}_{(aq)}}
+\newcommand{\A}{\ce{A-}_{(aq)}}
+\newcommand{\MnO}{\ce{MnO_4^{-}}}
+\newcommand{\conc}[1]{\left[{#1}\right]}
+\newcommand{\couple}[2]{\ce{#1/#2}}
+
+
+% Environnements ------------------------
+\newcounter{exo}
+\newenvironment{exo}[1][]
+{\refstepcounter{exo} \begin{shaded}\noindent $\triangleright \quad$\textbf{Exercice~\theexo. #1} } { \end{shaded}}
+\newenvironment{eg}
+{\begin{shaded} \textbf{Exemple:} } { \end{shaded}}
+
+\newenvironment{defn}[1]
+{\begin{leftbar}\noindent \textbf{Définition :\textit{ \quad #1}} } { \end{leftbar}}
+
+%\newenvironment{rmrq}
+%{\begin{shaded} \textbf{Remarque.\quad } \itshape } { \end{shaded}}
+\newenvironment{rmrq}
+{\begin{mdframed}[backgroundcolor=blue!10, linewidth=0pt] \textbf{Remarque.\quad } \itshape } { \end{mdframed}}
+
+\newenvironment{python}
+{\begin{shaded} \textbf{A faire en PYTHON}\\ \itshape } { \end{shaded}}
+
+% Shading colour -----------------------------
+\definecolor{shadecolor}{gray}{0.9}
+
+\date{}
+\author{}
+
+\renewcommand*\contentsname{Résumé}
+
+
+
+
+
+
+
